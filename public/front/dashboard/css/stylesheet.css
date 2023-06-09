@@ -1,0 +1,335 @@
+img{
+    max-width: 100%;
+}
+
+.pool_property_image{
+    border-radius: 20px;
+    height: 241px;
+    width: 346px;
+}
+
+h2 {
+    width: 160px;
+    height: 31px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-family: 'Barlow'; 
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 13px;
+    display: flex;
+    align-items: center;
+    color: #202120;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.image a {
+    width: 223px;
+    height: 24px;
+    flex: none;
+    order: 2;
+    font-family: 'Barlow';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #979CA5;
+    flex-grow: 0;
+}
+
+.list a {
+    color: #202120;
+}
+
+.out a {
+    width: 54px;
+    height: 19px;
+    display: inline;
+    font-family: 'Barlow';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 19px;
+    color: #FE0000;
+}
+
+.icon {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 840px;
+    top: 25px;
+}
+
+.text-sm-left {
+    margin-left: 19px;
+    width: 448px;
+    height: 57px;
+    font-family: 'Barlow';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 28px;
+    color: #202120;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+
+}
+
+.price {
+    margin-left: 15px;
+    width: 102px;
+    height: 32px;
+    font-family: 'Barlow';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 132%;
+    color: #3C652F;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.people {
+    margin-left: 15px;
+    width: 196px;
+    height: 29px;
+    font-family: 'Barlow';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+    color: #202120;
+    flex: none;
+    order: 3;
+    flex-grow: 0;
+}
+
+
+.md-stepper-horizontal .md-step {
+    display: table-cell;
+    position: relative;
+    padding-left: 15px;
+    
+
+}
+
+.md-stepper-horizontal .md-step .md-step-circle {
+    width: 35px;
+    height: 35px;
+    margin-top: -10px;
+    margin-left: 0px;
+    background: #D1D5DB;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 35px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #FFFFFF;
+    position: absolute;
+
+}
+
+.md-step.default .md-step-circle {
+    background-color: #00AE4D;
+}
+
+.md-stepper-horizontal .md-step.active .md-step-circle {
+    background-color: rgb(33, 150, 243);
+}
+
+.md-stepper-horizontal .md-step .md-step-title {
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 900;
+}
+
+.md-stepper-horizontal .md-step.default .md-step-title {
+
+    width: 36px;
+    height: 7px;
+    left: 105px;
+    top: 37.5px;
+
+    font-family: 'Barlow';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 7px;
+    line-height: 7px;
+    /* identical to box height, or 100% */
+
+    text-align: center;
+
+    color: #3C652F;
+
+}
+
+.md-stepper-horizontal .md-step .md-step-title {
+    width: 35px;
+    height: 7px;
+    left: 340px;
+    top: 37.5px;
+    font-family: 'Barlow';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 7px;
+    line-height: 7px;
+    /* identical to box height, or 100% */
+
+    text-align: center;
+
+    color: #666666;
+}
+
+.md-stepper-horizontal .md-step.active .md-step-title {
+
+    width: 54px;
+    height: 7px;
+    left: 205px;
+    top: 37.5px;
+
+    font-family: 'Barlow';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 7px;
+    line-height: 7px;
+    text-align: center;
+    color: #47B2FF;
+}
+
+
+.md-stepper-horizontal .md-step .md-step-bar-left,
+.md-stepper-horizontal .md-step .md-step-bar-right {
+    position: relative;
+    margin-top: -30px;
+    height: 1px;
+    width: 80px;
+    border-top: 2px solid #DDDDDD;
+}
+
+.md-stepper-horizontal .md-step .md-step-bar-right {
+    right: -15px;
+    margin-left: 20px;
+
+
+}
+
+.md-step-bar-right.active {
+    border-color: green !important;
+}
+
+.md-stepper-horizontal .md-step .md-step-bar-left {
+    left: 35px;
+    margin-right: 10px;
+}
+
+.step{
+    margin-left: 22px;
+}
+.title {
+
+    position: relative;
+    width: 104px;
+    height: 22px;
+    left: 71px;
+    top: -29px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+
+    color: #666666;
+}
+
+.caption {
+    width: 619px;
+    height: 22px;
+    margin-left: -10px;
+    margin-top: -29px;
+    padding: 45px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    color: #202120;
+
+}
+
+.cover {
+    width: 790px;
+    height: 95px;
+    margin-left: 65px;
+    background: #F8F6F6;
+    border-radius: 15px;
+
+}
+
+.circle {
+    background: #fff;
+    position: relative;
+    width: 2.5em;
+    height: 2.5em;
+    line-height: 2.5em;
+    border-radius: 100%;
+    color: #4285f4;
+    text-align: center;
+    box-shadow: 0 0 0 1px #4285f4;
+}
+
+.dashed {
+
+    width: 90px;
+    height: 0px;
+    border: 1.8px dashed #47B2FF;
+    transform: rotate(90deg);
+    /* Inside auto layout */
+    margin-left: -25px;
+    margin-top: 23px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+
+}
+
+.step.step-active .circle {
+    background-color: #4285f4;
+    color: #fff;
+}
+
+.btnn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 9.53642px 22.4106px;
+    gap: 4.77px;
+    color: #fff;
+    position: absolute;
+    width: 72px;
+    height: 26.7px;
+    left: 635px;
+    background-color: #d11919;
+    text-align: center;
+    border-radius: 3.81457px;
+}
+
+.row [class*="col-"] {
+    padding: 0 15px;
+  }
+
