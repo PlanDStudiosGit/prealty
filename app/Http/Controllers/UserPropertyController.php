@@ -23,8 +23,7 @@ class UserPropertyController extends Controller
 		// echo '<pre>'; 
 		//  print_r($property->review_date);
 		//  exit;
-		$param = 'reviewed_properties';
-        return view('front.dashboard_2.reviewed_properties',compact('user','property','param'));
+        return view('front.dashboard_2.reviewed_properties',compact('user','property'));
     }else{
         return redirect('/');
     }

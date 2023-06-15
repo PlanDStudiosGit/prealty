@@ -71,8 +71,14 @@
 	height:92px
 	
 	}
-</style>
 
+
+</style>
+<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.min.css">
 
 
     <div class="dealership-form">
@@ -85,7 +91,7 @@
 				         <label>Property Type</label>
 				        <select class="form-control" required="required" name="type">
 				         	<option value="" >Choose option</option>
-				            <option value="Single-Family" {{@$property->type == 'Single-Family' ? 'selected':'' }}>Single-Family</option>
+				            <option value="Single-Family" {{@$property->type == 'Single-Familyes' ? 'selected':'' }}>Single-Family</option>
 				            <option value="Condo" {{ @$property->type == 'Condo' ? 'selected':'' }}>Condo</option>
 
 				            <option value="TownHouse" {{ @$property->type == 'TownHouse' ? 'selected':'' }}>TownHouse</option>
@@ -104,26 +110,462 @@
 						<input maxlength="255" type="number" name="price" class="form-control" required placeholder="Property Price" min="0" value="{{@$property->price}}" required>
                 	</div>
 
-
-                <div class="form-group col-md-6">
-                    <label>Bedrooms</label>
-                    <input maxlength="255" type="number" name="bedrooms" class="form-control" required placeholder="Bedrooms" min="0" value="{{ @$property->bedrooms }}" required>
+				<div class="form-group col-md-6"> 
+					<label>Lot size</label>
+					<input maxlength="255" type="number" name="lot_size" class="form-control" required placeholder="Lot size" min="0" value="{{ @$property->lot_size}}" required>
                 </div>
 
-                
+				<div class="form-group col-md-12">
+					<h3 style="color: #63729A; border-top:1px solid #63729A">Bedrooms </h3>
+				</div>
+                  
+				
+      
+				<div class="form-group col-md-6">
+				    <label>Bedrooms </label>	
+					<select id="selectBedroom" class="form-control" required="required" name="bedrooms" onchange="showBedrooms()">
+						<option value="0" >Select an option</option>
+						<option value="1" {{ @$property->bedrooms == '1' ? 'selected':'' }}>1</option>
+						<option value="2" {{ @$property->bedrooms == '2' ? 'selected':'' }}>2</option>
+						<option value="3" {{ @$property->bedrooms == '3' ? 'selected':'' }}>3</option>
+						<option value="4" {{ @$property->bedrooms == '4' ? 'selected':'' }}>4</option>
+						<option value="5" {{ @$property->bedrooms == '5' ? 'selected':'' }}>5</option>
+						<option value="6" {{ @$property->bedrooms == '6' ? 'selected':'' }}>6</option>
+						<option value="7" {{ @$property->bedrooms == '7' ? 'selected':'' }}>7</option>
+						<option value="8" {{ @$property->bedrooms == '8' ? 'selected':'' }}>8</option>
+						<option value="9" {{ @$property->bedrooms == '9' ? 'selected':'' }}>9</option>
+						<option value="10"{{ @$property->bedrooms == '10' ? 'selected':'' }}>10</option>
+					</select>
+				</div>  
+		
+				
 
-                 <div class="form-group col-md-6">
+					<!-- bedroom 1  -->
+					<div id="bedroom1" class="myBedroom col-md-12">
+						<div class="row">
+							<div class="form-group col-md-12 " >
+								<h5 style="color: #63729A;">Master Bedroom</h5>
+							</div>
+
+							<div class="form-group col-md-6 ">
+								<label>Area</label>
+								<input  type="number" name="master_bedroom_area" class="form-control" placeholder="Area" value="{{ @$property->master_bedroom_area }}">
+							</div>
+							<div class="form-group col-md-6 ">
+								<label>Length</label>
+								<input  type="number" name="master_bedroom_length" class="form-control" placeholder="Length" value="{{ @$property->master_bedroom_length }}">
+							</div> 
+							<div class="form-group col-md-6 ">
+								<label>Width</label>
+								<input  type="number" name="master_bedroom_width" class="form-control" placeholder="Width" value="{{ @$property->master_bedroom_width }}">
+							</div>
+						
+								<div class="form-group col-md-6  ">
+									<label>Level</label>
+									<select class="form-control select2"  name="master_bedroom_level">
+										<option value="">Choose option</option>
+										<option value="first" {{ @$property->master_bedroom_level == 'first' ? 'selected':'' }}>first</option>
+										<option value="second" {{ @$property->master_bedroom_level == 'second' ? 'selected':'' }}>second</option>
+										<option value="basement" {{ @$property->master_bedroom_level == 'basement' ? 'selected':'' }}>basement</option>
+
+									</select>
+								</div>
+
+								<div class="form-group col-md-6 ">
+									<label>Features</label>
+									<input  type="text" name="master_bedroom_features" class="form-control" placeholder="Features" value="{{ @$property->master_bedroom_features }}">
+								</div>
+								
+							</div>
+						</div>
+				
+
+
+
+
+
+
+
+					<div id="bedroom2" class="myBedroom col-md-12">
+						<div class="row">
+							<div class="form-group col-md-12 " >
+								<h5 style="color: #63729A;">Bedroom 2</h5>
+							</div>
+
+							<div class="form-group col-md-6 ">
+								<label>Area</label>
+								<input  type="number" name="bedroom_2_area" class="form-control" placeholder="Area" value="{{ @$property->bedroom_2_area }}">
+							</div>
+							<div class="form-group col-md-6 ">
+								<label>Length</label>
+								<input  type="number" name="bedroom_2_length" class="form-control" placeholder="Length" value="{{ @$property->bedroom_2_length }}">
+							</div> 
+							<div class="form-group col-md-6 ">
+								<label>Width</label>
+								<input  type="number" name="bedroom_2_width" class="form-control" placeholder="Width" value="{{ @$property->bedroom_2_width }}">
+							</div>
+						
+							<div class="form-group col-md-6  ">
+								<label>Level</label>
+								<select class="form-control"  name="bedroom_2_level">
+									<option value="">Choose option</option>
+									<option value="first" {{ @$property->bedroom_2_level == 'first' ? 'selected':'' }}>first</option>
+									<option value="second" {{ @$property->bedroom_2_level == 'second' ? 'selected':'' }}>second</option>
+									<option value="basement" {{ @$property->bedroom_2_level == 'basement' ? 'selected':'' }}>basement</option>
+
+								</select>
+							</div>
+
+
+							<div class="form-group col-md-6 ">
+								<label>Features</label>
+								<input type="text" name="bedroom_2_features" class="form-control" placeholder="Features" value="{{ @$property->bedroom_2_features }}">
+							</div>
+						
+						</div>
+					</div>
+
+
+
+
+					<div id="bedroom3" class="myBedroom col-md-12">
+						<div class="row">
+							<div class="form-group col-md-12 " >
+								<h5 style="color: #63729A;">Bedroom 3</h5>
+							</div>
+
+							<div class="form-group col-md-6 ">
+								<label>Area</label>
+								<input  type="number" name="bedroom_3_area" class="form-control" placeholder="Area" value="{{ @$property->bedroom_3_area }}">
+							</div>
+							<div class="form-group col-md-6 ">
+								<label>Length</label>
+								<input  type="number" name="bedroom_3_length" class="form-control" placeholder="Length" value="{{ @$property->bedroom_3_length }}">
+							</div> 
+							<div class="form-group col-md-6 ">
+								<label>Width</label>
+								<input  type="number" name="bedroom_3_width" class="form-control" placeholder="Width" value="{{ @$property->bedroom_3_width }}">
+							</div>
+						
+							<div class="form-group col-md-6  ">
+								<label>Level</label>
+								<select class="form-control"  name="bedroom_3_level">
+									<option value="">Choose option</option>
+									<option value="first" {{ @$property->bedroom_3_level == 'first' ? 'selected':'' }}>first</option>
+									<option value="second" {{ @$property->bedroom_3_level == 'second' ? 'selected':'' }}>second</option>
+									<option value="basement" {{ @$property->bedroom_3_level == 'basement' ? 'selected':'' }}>basement</option>
+
+								</select>
+							</div>
+
+							<div class="form-group col-md-6 ">
+								<label>Features</label>
+								<input type="text" name="bedroom_3_features" class="form-control" placeholder="Features" value="{{ @$property->bedroom_3_features }}">
+							</div>
+						</div>
+					</div>
+
+
+
+					<div id="bedroom4" class="myBedroom col-md-12">
+						<div class="row">
+							<div class="form-group col-md-12 " >
+								<h5 style="color: #63729A;">Bedroom 2</h5>
+							</div>
+
+							<div class="form-group col-md-6 ">
+								<label>Area</label>
+								<input  type="number" name="bedroom_4_area" class="form-control" placeholder="Area" value="{{ @$property->bedroom_4_area }}">
+							</div>
+							<div class="form-group col-md-6 ">
+								<label>Length</label>
+								<input  type="number" name="bedroom_4_length" class="form-control" placeholder="Length" value="{{ @$property->bedroom_4_length }}">
+							</div> 
+							<div class="form-group col-md-6 ">
+								<label>Width</label>
+								<input  type="number" name="bedroom_4_width" class="form-control" placeholder="Width" value="{{ @$property->bedroom_4_width }}">
+							</div>
+						
+							<div class="form-group col-md-6  ">
+								<label>Level</label>
+								<select class="form-control"  name="bedroom_4_level">
+									<option value="">Choose option</option>
+									<option value="first" {{ @$property->bedroom_4_level == 'first' ? 'selected':'' }}>first</option>
+									<option value="second" {{ @$property->bedroom_4_level == 'second' ? 'selected':'' }}>second</option>
+									<option value="basement" {{ @$property->bedroom_4_level == 'basement' ? 'selected':'' }}>basement</option>
+
+								</select>
+							</div>
+
+
+							<div class="form-group col-md-6 ">
+								<label>Features</label>
+								<input type="text" name="bedroom_4_features" class="form-control" placeholder="Features" value="{{ @$property->bedroom_4_features }}">
+							</div>
+						</div>
+					</div>
+
+
+
+
+
+					<div id="bedroom5" class="myBedroom col-md-12">
+						<div class="row">
+							<div class="form-group col-md-12 " >
+								<h5 style="color: #63729A;">Bedroom 5</h5>
+							</div>
+
+							<div class="form-group col-md-6 ">
+								<label>Area</label>
+								<input  type="number" name="bedroom_5_area" class="form-control" placeholder="Area" value="{{ @$property->bedroom_5_area }}">
+							</div>
+							<div class="form-group col-md-6 ">
+								<label>Length</label>
+								<input  type="number" name="bedroom_5_length" class="form-control" placeholder="Length" value="{{ @$property->bedroom_5_length }}">
+							</div> 
+							<div class="form-group col-md-6 ">
+								<label>Width</label>
+								<input  type="number" name="bedroom_5_width" class="form-control" placeholder="Width" value="{{ @$property->bedroom_5_width }}">
+							</div>
+						
+							<div class="form-group col-md-6  ">
+								<label>Level</label>
+								<select class="form-control"  name="bedroom_5_level">
+									<option value="">Choose option</option>
+									<option value="first" {{ @$property->bedroom_5_level == 'first' ? 'selected':'' }}>first</option>
+									<option value="second" {{ @$property->bedroom_5_level == 'second' ? 'selected':'' }}>second</option>
+									<option value="basement" {{ @$property->bedroom_5_level == 'basement' ? 'selected':'' }}>basement</option>
+
+								</select>
+							</div>
+
+
+							<div class="form-group col-md-6 ">
+								<label>Features</label>
+								<input type="text" name="bedroom_5_features" class="form-control" placeholder="Features" value="{{ @$property->bedroom_5_features }}">
+							</div>
+						</div>
+					</div>
+
+
+
+
+					<div id="bedroom6" class="myBedroom col-md-12">
+						<div class="row">
+							<div class="form-group col-md-12 " >
+								<h5 style="color: #63729A;">Bedroom 6</h5>
+							</div>
+
+							<div class="form-group col-md-6 ">
+								<label>Area</label>
+								<input  type="number" name="bedroom_6_area" class="form-control" placeholder="Area" value="{{ @$property->bedroom_6_area }}">
+							</div>
+							<div class="form-group col-md-6 ">
+								<label>Length</label>
+								<input  type="number" name="bedroom_6_length" class="form-control" placeholder="Length" value="{{ @$property->bedroom_6_length }}">
+							</div> 
+							<div class="form-group col-md-6 ">
+								<label>Width</label>
+								<input  type="number" name="bedroom_6_width" class="form-control" placeholder="Width" value="{{ @$property->bedroom_6_width }}">
+							</div>
+						
+							<div class="form-group col-md-6  ">
+								<label>Level</label>
+								<select class="form-control"  name="bedroom_6_level">
+									<option value="">Choose option</option>
+									<option value="first" {{ @$property->bedroom_6_level == 'first' ? 'selected':'' }}>first</option>
+									<option value="second" {{ @$property->bedroom_6_level == 'second' ? 'selected':'' }}>second</option>
+									<option value="basement" {{ @$property->bedroom_6_level == 'basement' ? 'selected':'' }}>basement</option>
+
+								</select>
+							</div>
+
+
+							<div class="form-group col-md-6 ">
+								<label>Features</label>
+								<input type="text" name="bedroom_6_features" class="form-control" placeholder="Features" value="{{ @$property->bedroom_6_features }}">
+							</div>
+						</div>
+					</div>
+
+
+
+					<div id="bedroom7" class="myBedroom col-md-12">
+						<div class="row">
+							<div class="form-group col-md-12 " >
+								<h5 style="color: #63729A;">Bedroom 7</h5>
+							</div>
+
+							<div class="form-group col-md-6 ">
+								<label>Area</label>
+								<input  type="number" name="bedroom_7_area" class="form-control" placeholder="Area" value="{{ @$property->bedroom_7_area }}">
+							</div>
+							<div class="form-group col-md-6 ">
+								<label>Length</label>
+								<input  type="number" name="bedroom_7_length" class="form-control" placeholder="Length" value="{{ @$property->bedroom_7_length }}">
+							</div> 
+							<div class="form-group col-md-6 ">
+								<label>Width</label>
+								<input  type="number" name="bedroom_7_width" class="form-control" placeholder="Width" value="{{ @$property->bedroom_7_width }}">
+							</div>
+						
+							<div class="form-group col-md-6  ">
+								<label>Level</label>
+								<select class="form-control"  name="bedroom_7_level">
+									<option value="">Choose option</option>
+									<option value="first" {{ @$property->bedroom_7_level == 'first' ? 'selected':'' }}>first</option>
+									<option value="second" {{ @$property->bedroom_7_level == 'second' ? 'selected':'' }}>second</option>
+									<option value="basement" {{ @$property->bedroom_7_level == 'basement' ? 'selected':'' }}>basement</option>
+
+								</select>
+							</div>
+
+
+							<div class="form-group col-md-6 ">
+								<label>Features</label>
+								<input type="text" name="bedroom_7_features" class="form-control" placeholder="Features" value="{{ @$property->bedroom_7_features }}">
+							</div>
+						</div>
+					</div>
+
+
+
+					<div id="bedroom8" class="myBedroom col-md-12">
+						<div class="row">
+							<div class="form-group col-md-12 " >
+								<h5 style="color: #63729A;">Bedroom 8</h5>
+							</div>
+
+							<div class="form-group col-md-6 ">
+								<label>Area</label>
+								<input  type="number" name="bedroom_8_area" class="form-control" placeholder="Area" value="{{ @$property->bedroom_8_area }}">
+							</div>
+							<div class="form-group col-md-6 ">
+								<label>Length</label>
+								<input  type="number" name="bedroom_8_length" class="form-control" placeholder="Length" value="{{ @$property->bedroom_8_length }}">
+							</div> 
+							<div class="form-group col-md-6 ">
+								<label>Width</label>
+								<input  type="number" name="bedroom_8_width" class="form-control" placeholder="Width" value="{{ @$property->bedroom_8_width }}">
+							</div>
+						
+							<div class="form-group col-md-6  ">
+								<label>Level</label>
+								<select class="form-control"  name="bedroom_8_level">
+									<option value="">Choose option</option>
+									<option value="first" {{ @$property->bedroom_8_level == 'first' ? 'selected':'' }}>first</option>
+									<option value="second" {{ @$property->bedroom_8_level == 'second' ? 'selected':'' }}>second</option>
+									<option value="basement" {{ @$property->bedroom_8_level == 'basement' ? 'selected':'' }}>basement</option>
+
+								</select>
+							</div>
+
+
+							<div class="form-group col-md-6 ">
+								<label>Features</label>
+								<input type="text" name="bedroom_8_features" class="form-control" placeholder="Features" value="{{ @$property->bedroom_8_features }}">
+							</div>
+						</div>
+					</div>
+
+
+
+
+					<div id="bedroom9" class="myBedroom col-md-12">
+						<div class="row">
+							<div class="form-group col-md-12 " >
+								<h5 style="color: #63729A;">Bedroom 9</h5>
+							</div>
+
+							<div class="form-group col-md-6 ">
+								<label>Area</label>
+								<input  type="number" name="bedroom_9_area" class="form-control" placeholder="Area" value="{{ @$property->bedroom_9_area }}">
+							</div>
+							<div class="form-group col-md-6 ">
+								<label>Length</label>
+								<input  type="number" name="bedroom_9_length" class="form-control" placeholder="Length" value="{{ @$property->bedroom_9_length }}">
+							</div> 
+							<div class="form-group col-md-6 ">
+								<label>Width</label>
+								<input  type="number" name="bedroom_9_width" class="form-control" placeholder="Width" value="{{ @$property->bedroom_9_width }}">
+							</div>
+						
+							<div class="form-group col-md-6  ">
+								<label>Level</label>
+								<select class="form-control"  name="bedroom_9_level">
+									<option value="">Choose option</option>
+									<option value="first" {{ @$property->bedroom_9_level == 'first' ? 'selected':'' }}>first</option>
+									<option value="second" {{ @$property->bedroom_9_level == 'second' ? 'selected':'' }}>second</option>
+									<option value="basement" {{ @$property->bedroom_9_level == 'basement' ? 'selected':'' }}>basement</option>
+
+								</select>
+							</div>
+
+
+							<div class="form-group col-md-6 ">
+								<label>Features</label>
+								<input type="text" name="bedroom_9_features" class="form-control" placeholder="Features" value="{{ @$property->bedroom_9_features }}">
+							</div>
+						</div>
+					</div>
+
+
+
+
+					<div id="bedroom10" class="myBedroom col-md-12">
+						<div class="row">
+							<div class="form-group col-md-12 " >
+								<h5 style="color: #63729A;">Bedroom 10</h5>
+							</div>
+
+							<div class="form-group col-md-6 ">
+								<label>Area</label>
+								<input  type="number" name="bedroom_10_area" class="form-control" placeholder="Area" value="{{ @$property->bedroom_10_area }}">
+							</div>
+							<div class="form-group col-md-6 ">
+								<label>Length</label>
+								<input  type="number" name="bedroom_10_length" class="form-control" placeholder="Length" value="{{ @$property->bedroom_10_length }}">
+							</div> 
+							<div class="form-group col-md-6 ">
+								<label>Width</label>
+								<input  type="number" name="bedroom_10_width" class="form-control" placeholder="Width" value="{{ @$property->bedroom_10_width }}">
+							</div>
+						
+							<div class="form-group col-md-6  ">
+								<label>Level</label>
+								<select class="form-control"  name="bedroom_10_level">
+									<option value="">Choose option</option>
+									<option value="first" {{ @$property->bedroom_10_level == 'first' ? 'selected':'' }}>first</option>
+									<option value="second" {{ @$property->bedroom_10_level == 'second' ? 'selected':'' }}>second</option>
+									<option value="basement" {{ @$property->bedroom_10_level == 'basement' ? 'selected':'' }}>basement</option>
+
+								</select>
+							</div>
+
+							<div class="form-group col-md-6 ">
+								<label>Features</label>
+								<input  tytextmber" name="bedroom_10_features" class="form-control" placeholder="Features" value="{{ @$property->master_bedroom_width }}">
+							</div>
+						</div>
+					</div>
+				
+
+
+				<!-- bedrooms   -->
+
+
+				<div class="form-group col-md-12">
+						<h3 style="color: #63729A; border-top:1px solid">Bathrooms </h3>
+					</div>
+                <div class="form-group col-md-6">
                     <label>Bathrooms</label>
                     <input maxlength="255" type="number" name="bathrooms" class="form-control" required placeholder="Bathrooms" min="0" value="{{ @$property->bathrooms }}" required>
                 </div>
 
-                 <div class="form-group col-md-6">
-                    <label>Lot size</label>
-                    <input maxlength="255" type="number" name="lot_size" class="form-control" required placeholder="Lot size" min="0" value="{{ @$property->lot_size}}" required>
-                </div>
+                 
 
 
-   				<div class="form-group col-md-6">
+   				<!-- <div class="form-group col-md-6">
                     <label>Garage</label>
                     <input maxlength="255" type="number" name="garage" class="form-control" required placeholder="Garage" min="0" value="{{ @$property->garage }}" required>
                 </div>
@@ -222,24 +664,25 @@
 						<label>Hot Properties</label>
 					   <select class="form-control" required="required" name="hot_properties">
 							<option value="" >Choose option</option>
-						   <option value="Y" {{ @$property->hot_properties == 'Y' ? 'selected':'' }}>Yes</option>
-						   <option value="N" {{ @$property->hot_properties == 'N' ? 'selected':'' }}>No</option>
+						   <option value="Y" {{ @$property->hot_properties == 'Yes' ? 'selected':'' }}>Yes</option>
+						   <option value="N" {{ @$property->hot_properties == 'No' ? 'selected':'' }}>No</option>
 					   </select>
 				   </div>
 
 				   <div class="form-group col-md-6">
 						<label>Pulse Profit</label>
 						<input maxlength="255" type="number" name="company_profit" class="form-control" required placeholder="Pulse Profit" min="10" max="100" value="10" value="{{@$property->company_profit}}" required>
-                	</div>
+                	</div> -->
 
 					
-					<div class="form-group col-md-12">
-						<h3 style="color: #63729A;">Home facts </h3>
+					<!-- <div class="form-group col-md-12">
+						<h3 style="color: #63729A; border-top:1px solid">Home facts </h3>
 					</div>
 					<div class="form-group col-md-6">
 						<label>Year Built</label>
 						<input type="number" name="yearbuilt" class="form-control" required placeholder="Year Built" value="{{ @$property->yearbuilt }}" required>
                 	</div>
+
 
 
 					
@@ -248,7 +691,6 @@
 					   <select class="form-control" required="required" name="style">
 							<option value="" >Choose option</option>
 						   <option value="cape" {{ @$property->hot_properties == 'cape' ? 'selected':'' }}>Cape</option>
-						   <!-- <option value="N" {{ @$property->hot_properties == 'N' ? 'selected':'' }}>No</option> -->
 					   </select>
 				   </div>
 
@@ -257,19 +699,79 @@
 					<div class="form-group col-md-6">
 						<label>MLS#</label>
 						<input type="text" name="mls" class="form-control" required placeholder="Year Built" value="{{ @$property->mls }}" required>
-                	</div>
+                	</div> -->
  
 					<div class="form-group col-md-12">
-						<h3  style="color: #63729A;">Parking </h3>
+						<h3  style="color: #63729A; border-top: 1px solid #63729A">Parking </h3>
 					</div>
+ 
+					<div class="form-group col-md-6">
+						<label>Has a Garage</label>
+					   <select class="form-control" required="required" name="has_garage">
+							<option value="" >Choose option</option>
+						   <option value="Yes" {{ @$property->has_garage == 'Yes' ? 'selected':'' }}>Yes</option>
+						   <option value="No" {{ @$property->has_garage == 'No' ? 'selected':'' }}>No</option>
+					   </select>
+				   </div> 
 							
 					
 					<div class="form-group col-md-6">
-						<label>Has Parking Open</label>
-					   <select class="form-control" required="required" name="hot_properties">
+						<label>Has Open Parking</label>
+					   <select class="form-control" required="required" name="open_parking">
 							<option value="" >Choose option</option>
-						   <option value="Y" {{ @$property->hot_properties == 'Y' ? 'selected':'' }}>Yes</option>
-						   <option value="N" {{ @$property->hot_properties == 'N' ? 'selected':'' }}>No</option>
+						   <option value="Yes" {{ @$property->open_parking == 'Yes' ? 'selected':'' }}>Yes</option>
+						   <option value="No" {{ @$property->open_parking == 'No' ? 'selected':'' }}>No</option>
+					   </select>
+				   </div> 
+
+				   <div class="form-group col-md-6">
+						<label>Number Garage Spaces</label>
+					   <select class="form-control" required="required" name="total_garage">
+							<option value="" >Choose option</option>
+						   <option value="1" {{ @$property->total_garage == '1' ? 'selected':'' }}>1</option>
+						   <option value="2" {{ @$property->total_garage == '2' ? 'selected':'' }}>2</option>
+						   <option value="3" {{ @$property->total_garage == '3' ? 'selected':'' }}>3</option>
+						   <option value="4" {{ @$property->total_garage == '4' ? 'selected':'' }}>4</option>
+						   <option value="5" {{ @$property->total_garage == '5' ? 'selected':'' }}>5</option>
+						   <option value="6" {{ @$property->total_garage == '6' ? 'selected':'' }}>6</option>
+						   <option value="7" {{ @$property->total_garage == '7' ? 'selected':'' }}>7</option>
+						   <option value="8" {{ @$property->total_garage == '8' ? 'selected':'' }}>8</option>
+						   <option value="9" {{ @$property->total_garage == '9' ? 'selected':'' }}>9</option>
+						   <option value="10"{{ @$property->total_garage == '10' ? 'selected':'' }}>10</option>
+					   </select>
+				   </div> 
+
+				   <div class="form-group col-md-6">
+						<label>Number of Covered Spaces</label>
+					   <select class="form-control" required="required" name="covered_garage">
+							<option value="" >Choose option</option>
+						   <option value="1" {{ @$property->covered_garage == '1' ? 'selected':'' }}>1</option>
+						   <option value="2" {{ @$property->covered_garage == '2' ? 'selected':'' }}>2</option>
+						   <option value="3" {{ @$property->covered_garage == '3' ? 'selected':'' }}>3</option>
+						   <option value="4" {{ @$property->covered_garage == '4' ? 'selected':'' }}>4</option>
+						   <option value="5" {{ @$property->covered_garage == '5' ? 'selected':'' }}>5</option>
+						   <option value="6" {{ @$property->covered_garage == '6' ? 'selected':'' }}>6</option>
+						   <option value="7" {{ @$property->covered_garage == '7' ? 'selected':'' }}>7</option>
+						   <option value="8" {{ @$property->covered_garage == '8' ? 'selected':'' }}>8</option>
+						   <option value="9" {{ @$property->covered_garage == '9' ? 'selected':'' }}>9</option>
+						   <option value="10"{{ @$property->covered_garage == '10' ? 'selected':'' }}>10</option>
+					   </select>
+				   </div> 
+
+				   <div class="form-group col-md-6">
+						<label>Parking Total:</label>
+					   <select class="form-control" required="required" name="total_parking">
+							<option value="" >Choose option</option>
+						   <option value="1" {{ @$property->total_parking == '1' ? 'selected':'' }}>1</option>
+						   <option value="2" {{ @$property->total_parking == '2' ? 'selected':'' }}>2</option>
+						   <option value="3" {{ @$property->total_parking == '3' ? 'selected':'' }}>3</option>
+						   <option value="4" {{ @$property->total_parking == '4' ? 'selected':'' }}>4</option>
+						   <option value="5" {{ @$property->total_parking == '5' ? 'selected':'' }}>5</option>
+						   <option value="6" {{ @$property->total_parking == '6' ? 'selected':'' }}>6</option>
+						   <option value="7" {{ @$property->total_parking == '7' ? 'selected':'' }}>7</option>
+						   <option value="8" {{ @$property->total_parking == '8' ? 'selected':'' }}>8</option>
+						   <option value="9" {{ @$property->total_parking == '9' ? 'selected':'' }}>9</option>
+						   <option value="10"{{ @$property->total_parking == '10' ? 'selected':'' }}>10</option>
 					   </select>
 				   </div> 
 
@@ -278,14 +780,9 @@
 						<input type="text" name="parking_features" class="form-control" required placeholder="Parking Features" value="{{ @$property->parking_features }}" required>
                 	</div>
 
-					<div class="form-group col-md-6">
-						<label>Parking Total:</label>
-						<input type="text" name="parking_total" class="form-control" required placeholder="Parking Total" value="{{ @$property->parking_total }}" required>
-                	</div>
 
-
-					<div class="form-group col-md-12">
-						<h3  style="color: #63729A;">Interior </h3>
+					<!-- <div class="form-group col-md-12">
+						<h3  style="color: #63729A; border-top: 1px solid #63729A">Interior </h3>
 					</div>
 
 					<div class="form-group col-md-6">
@@ -384,31 +881,10 @@
 						<input type="text" name="appliances" class="form-control" required placeholder="Appliances" value="{{ @$property->appliances }}" required>
                 	</div>
 
-					<!-- <div class="form-group col-md-12">
-						<h3 style="color: #63729A;">Exterior </h3>
-					</div>
 					<div class="form-group col-md-12">
-						<h5 style="color: #63729A;">Building Information </h5>
+						<h3 style="color: #63729A; border-top:1px solid">Exterior </h3>
 					</div>
-
-					<div class="form-group col-md-6">
-						<label>Building Area (Total):</label>
-						<input type="number" name="building_area" class="form-control" required placeholder="Building Area (Total)" value="{{ @$property->building_area }}" required>
-                	</div>
-
-					<div class="form-group col-md-6">
-						<label>Foundation Details:</label>
-						<input type="number" name="foundation_detail" class="form-control" required placeholder="Foundation Details" value="{{ @$property->foundation_detail }}" required>
-                	</div>
-					
-					<div class="form-group col-md-6">
-						<label>Building Area (Total):</label>
-						<input type="number" name="building_area" class="form-control" required placeholder="Building Area (Total)" value="{{ @$property->building_area }}" required>
-                	</div> -->
-					<div class="form-group col-md-12">
-						<h3 style="color: #63729A;">Exterior </h3>
-					</div>
-                    <!-- heading 1 -->
+               
 					<div class="form-group col-md-12">
 						<h5 style="color: #63729A;">Building Information </h5>
 					</div>
@@ -436,7 +912,7 @@
 						<input type="text " name="year_built_details" class="form-control" required placeholder="Year Built Details" value="{{ @$property->year_built_source }}" required>
                 	</div>
 
-					 <!-- heading 2 -->
+	
 					 
                      <div class="form-group col-md-12">
 						<h5 style="color: #63729A;">Exterior Features </h5>
@@ -453,11 +929,7 @@
                 	</div>
 
 
-                    
-                     <!-- heading 3 -->
-                     <!-- heading 3 -->
-                     <!-- heading 3 -->
-
+     
 
                     <div class="form-group col-md-12">
 						<h5 style="color: #63729A;">Property Information </h5>
@@ -474,9 +946,6 @@
                 	</div>
 
 
-                     <!-- heading 4 -->
-                     <!-- heading 4 -->
-                     <!-- heading 4 -->
 
                      <div class="form-group col-md-12">
 						<h5 style="color: #63729A;">Lot Information </h5>
@@ -507,12 +976,12 @@
                 	</div>
 
 
-                    <!-- section 2 -->
 
                     <div class="form-group col-md-12">
-						<h3 style="color: #63729A;">Financial </h3>
+						<h3 style="color: #63729A; border-top:1px solid">Financial </h3>
 					</div>
-                    <!-- heading 1 -->
+
+
 					<div class="form-group col-md-12">
 						<h5 style="color: #63729A;">Tax Information </h5>
 					</div>
@@ -535,12 +1004,11 @@
 
 
 
-                     <!-- section 3 -->
-
                      <div class="form-group col-md-12">
-						<h3 style="color: #63729A;">Utilities </h3>
+						<h3 style="color: #63729A; border-top:1px solid">Utilities </h3>
 					</div>
-                    <!-- heading 1 -->
+					
+
 					<div class="form-group col-md-12">
 						<h5 style="color: #63729A;">Utility Information</h5>
 					</div>
@@ -566,9 +1034,6 @@
                 	</div>
 
 
-
-
-                    <!-- heading 2 -->
 					<div class="form-group col-md-12">
 						<h5 style="color: #63729A;">Heating & Cooling</h5>
 					</div>
@@ -586,12 +1051,12 @@
                      
 
 
- <!-- section 4 -->
 
  <div class="form-group col-md-12">
-						<h3 style="color: #63729A;">Location </h3>
+						<h3 style="color: #63729A; border-top:1px solid">Location </h3>
 					</div>
-                    <!-- heading 1 -->
+					
+
 					<div class="form-group col-md-12">
 						<h5 style="color: #63729A;">Location Information</h5>
 					</div>
@@ -610,8 +1075,6 @@
 
 
 
-
-                    <!-- heading 2 -->
 					<div class="form-group col-md-12">
 						<h5 style="color: #63729A;">Community Information</h5>
 					</div>
@@ -629,12 +1092,12 @@
                      
 
 
-            <!-- section 5 -->
 
                 <div class="form-group col-md-12">
-						<h3 style="color: #63729A;">Other </h3>
+						<h3 style="color: #63729A; border-top:1px solid">Other </h3>
 					</div>
-                    <!-- heading 1 -->
+                
+
 					<div class="form-group col-md-12">
 						<h5 style="color: #63729A;">Miscellaneous Information</h5>
 					</div>
@@ -648,10 +1111,7 @@
                      
                   
 
-
-
-
-                    <!-- heading 2 -->
+					
 					<div class="form-group col-md-12">
 						<h5 style="color: #63729A;">Listing Information</h5>
 					</div>
@@ -686,7 +1146,7 @@
 						<label>TransactionBrokerCompensation:</label>
 						<input type="number" name="transactionBrokerCompensation" class="form-control" required placeholder="TransactionBrokerCompensation" value="{{ @$property->transactionBrokerCompensation }}" required>
                 	</div>
-                     
+                      -->
 
 
 
@@ -782,12 +1242,51 @@
 
 
 
+
+
+
+
+	<!-- bedrooms  -->
+
+<script>
+    function showBedrooms() {
+        // Hide all divs
+        var divs = document.getElementsByClassName("myBedroom");
+        for (var i = 0; i < divs.length; i++) {
+            divs[i].style.display = "none";
+        }
+
+        // Get the selected option
+        var selectBox = document.getElementById("selectBedroom");
+        var selectedOption = selectBox.options[selectBox.selectedIndex].value;
+
+        // Show the selected number of divs
+        for (var i = 1; i <= selectedOption; i++) {
+            var div = document.getElementById("bedroom" + i);
+            if (div) {
+                div.style.display = "block";
+            }
+        }
+		
+    }
+
+    // Hide all divs on page load
+    window.addEventListener("load", function() {
+        showBedrooms();
+    });
+</script>
+	<!-- bedrooms  -->
+
+
 	
 
 
 
 <!-- single image  -->
 	<script>
+		$(document).ready(function(){
+			$('.select2').select2();
+		});
 		function readURL(input) {
 			if (input.files && input.files[0]) {
 				var reader = new FileReader();
@@ -892,6 +1391,8 @@ $(document).ready(function() {
 
 </script>
 
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
     <x-slot name="pluginCss"></x-slot>
     <x-admin.tinymce/>
 </x-admin-layout>

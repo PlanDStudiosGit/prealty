@@ -7,95 +7,41 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 use App\Models\Property;
+use App\Models\property_review;
+use App\Models\multiple_image;
+
 use Hash;
 
 class HomeController extends Controller
 {
-
-  public function hot_propertyj()
-  {
-      $properties = Property::where('hot_properties', 'Y')->get();
-  
-      $response = [];
-  
-      foreach ($properties as $property) {
-          $response[] = [
-              'id' => $property->id,
-              'featured_image' => $property->featured_image,
-              'bedrooms' => $property->bedrooms,
-              'type' => $property->type,
-              'address' => $property->address,
-              'price' => $property->price,
-              
-              'created_at' => $property->created_at,
-          ];
-      }
-  
-      return response()->json($response, 200);
-  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   public function hot_property()
   {
-      try {
-       
-        
-      $properties = Property::where('hot_properties', 'Y')->get();
-  
-      $response = [];
-  
-      foreach ($properties as $property) {
-          $response[] = [
+
+          $hot_properties = Property::where('hot_properties', 'Y')->get();
+
+
+        foreach ($hot_properties as $property) {
+                
+                        $propertyData[] = [
+                            'id' => $property->id,
+                            'featured_image' => $property->featured_image,
+                            'bedrooms' => $property->bedrooms,
+                            'type' => $property->type,
+                            'address' => $property->address,
+                            'price' => $property->price, 
+                            'created_at' => $property->created_at,         
+                        ];
+                }
+
+
+      $response = [
             'success' => true,
-              'id' => $property->id,
-              'featured_image' => $property->featured_image,
-              'bedrooms' => $property->bedrooms,
-              'type' => $property->type,
-              'address' => $property->address,
-              'price' => $property->price, 
-              
-              'created_at' => $property->created_at,
-          ];
-      }
-  
+            'hot-properties' => $propertyData
+      ];
+
       return response()->json($response, 200);
-      } catch (\Illuminate\Validation\ValidationException $e) {
-          $errors = $e->validator->errors()->all();
-              $response = [
-                  'success' => false,
-                  'error' => $errors
-              ];
 
-          return response()->json($response, 422);
-      }
   }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -105,12 +51,11 @@ class HomeController extends Controller
   {
     $properties=Property::latest()->limit(6)->get();
   
-      $response = [];
   
       foreach ($properties as $property) {
        
         
-          $response[] = [
+        $propertyData[] = [
               'id' => $property->id,
               'featured_image' => $property->featured_image,
               'bedrooms' => $property->bedrooms,
@@ -121,6 +66,12 @@ class HomeController extends Controller
               
           ];
       }
+
+      $response = [
+        'suucess' => true,
+        'properties' => $propertyData
+      ];
+
   
       return response()->json($response, 200);
   }
@@ -129,22 +80,21 @@ class HomeController extends Controller
 
 
 
-    public function propertyDetail($id)
-    {
-      $detail= Property::find($id);
-      $rating = Property_review::where('property_id', $id)->pluck('rating');
+  public function propertyDetail($id)
+  {
+      $property = Property::find($id);
+      $rating = Property_review::where('property_id', $id)->first();
+      $multiple_images = multiple_image::select('multiple_images')->where('property_id', $id)->get();
   
-      $response[] = [
-        'rating' => $rating,
-        'detail' => $detail,
-       
-        
-    ];
-      return response()->json($response , 200);
-      
-
-    }
-
-   
-    
-}
+      $property->rating = $rating->rating ?? 0;
+      $property->multiple_images = $multiple_images;
+  
+      $response = [
+          'success' => true,
+          'property' => $property
+      ];
+  
+      return response()->json($response, 200);
+  }
+     
+} 

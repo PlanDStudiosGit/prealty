@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="description" content="{{ config('app.description') }}">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- Google Fonts -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <!-- Google Fonts --> 
     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&display=swap"
           rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{{ asset('css/animate.css') }}">
     <link rel="stylesheet" href="{{ asset('css/normalize.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.min.css">
     {{ $pluginCss }}
     <link rel="stylesheet" href="{{ asset('css/style.css?v=1.004') }}">
     <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
@@ -28,7 +29,8 @@
     <script src="{{ asset('js/jquery-3.2.1.min.js') }}"></script>
     <script src="{{ asset('js/bootstrap.min.js') }}"></script>
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js"></script>    
 </head>
 <body>
 <!-- loader -->
@@ -181,5 +183,7 @@ $(document).on("click", ".deleteprocess", function (e) {
     });
 });
 </script>
+
+
 </body>
 </html>

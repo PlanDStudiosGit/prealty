@@ -40,6 +40,7 @@ class PropertyController extends Controller
 
 
        public function tabledata(Request $request) {
+        // echo 'asd';exit;
         $input = $request->all();
         $query = Property::query();
         if($request->search['value']) {
@@ -153,20 +154,75 @@ class PropertyController extends Controller
         $property->address = $request->address;
         $property->price = $request->price;
         $property->bedrooms = $request->bedrooms;
+
+        $property->master_bedroom_area = $request->master_bedroom_area;
+        $property->master_bedroom_length = $request->master_bedroom_length;
+        $property->master_bedroom_width = $request->master_bedroom_width;
+        $property->master_bedroom_level = $request->master_bedroom_level;
+        $property->master_bedroom_features = $request->master_bedroom_features;
+
+        $property->bedroom_2_area = $request->bedroom_2_area;
+        $property->bedroom_2_length = $request->bedroom_2_length;
+        $property->bedroom_2_width = $request->bedroom_2_width;
+        $property->bedroom_2_level = $request->bedroom_2_level;
+        $property->bedroom_2_features = $request->bedroom_2_features;
+
+        $property->bedroom_3_area = $request->bedroom_3_area;
+        $property->bedroom_3_length = $request->bedroom_3_length;
+        $property->bedroom_3_width = $request->bedroom_3_width;
+        $property->bedroom_3_level = $request->bedroom_3_level;
+        $property->bedroom_3_features = $request->bedroom_3_features;
+
+        $property->bedroom_4_area = $request->bedroom_4_area;
+        $property->bedroom_4_length = $request->bedroom_4_length;
+        $property->bedroom_4_width = $request->bedroom_4_width;
+        $property->bedroom_4_level = $request->bedroom_4_level;
+        $property->bedroom_4_features = $request->bedroom_4_features;
+
+        $property->bedroom_5_area = $request->bedroom_5_area;
+        $property->bedroom_5_length = $request->bedroom_5_length;
+        $property->bedroom_5_width = $request->bedroom_5_width;
+        $property->bedroom_5_level = $request->bedroom_5_level;
+        $property->bedroom_5_features = $request->bedroom_5_features;
+
+        $property->bedroom_6_area = $request->bedroom_6_area;
+        $property->bedroom_6_length = $request->bedroom_6_length;
+        $property->bedroom_6_width = $request->bedroom_6_width;
+        $property->bedroom_6_level = $request->bedroom_6_level;
+        $property->bedroom_6_features = $request->bedroom_6_features;
+
+        $property->bedroom_7_area = $request->bedroom_7_area;
+        $property->bedroom_7_length = $request->bedroom_7_length;
+        $property->bedroom_7_width = $request->bedroom_7_width;
+        $property->bedroom_7_level = $request->bedroom_7_level;
+        $property->bedroom_7_features = $request->bedroom_7_features;
+
+        $property->bedroom_8_area = $request->bedroom_8_area;
+        $property->bedroom_8_length = $request->bedroom_8_length;
+        $property->bedroom_8_width = $request->bedroom_8_width;
+        $property->bedroom_8_level = $request->bedroom_8_level;
+        $property->bedroom_8_features = $request->bedroom_8_features;
+
+        $property->bedroom_9_area = $request->bedroom_9_area;
+        $property->bedroom_9_length = $request->bedroom_9_length;
+        $property->bedroom_9_width = $request->bedroom_9_width;
+        $property->bedroom_9_level = $request->bedroom_9_level;
+        $property->bedroom_9_features = $request->bedroom_9_features;
+
+        $property->bedroom_10_area = $request->bedroom_10_area;
+        $property->bedroom_10_length = $request->bedroom_10_length;
+        $property->bedroom_10_width = $request->bedroom_10_width;
+        $property->bedroom_10_level = $request->bedroom_10_level;
+        $property->bedroom_10_features = $request->bedroom_10_features;
+        
         $property->bathrooms = $request->bathrooms;
-        $property->garage = $request->garage;
-        $property->lot_size = $request->lot_size;
-        $property->elevator = $request->elevator;
-        $property->fireplace = $request->fireplace;
-        $property->gated = $request->gated;
-        $property->garden = $request->garden;
-        $property->balcony = $request->balcony;
-        $property->terrace = $request->terrace;
-        $property->pool = $request->pool;
-        $property->basement = $request->basement;
-        $property->furnished = $request->furnished;
+        $property->has_garage = $request->has_garage;
+        $property->open_parking = $request->open_parking;
+        $property->total_garage = $request->total_garage;
+        $property->covered_garage = $request->covered_garage;
+
         $property->hot_properties = $request->hot_properties;
-        $property->company_profit = $request->company_profit;
+
         $property->description = $request->description;
         $property->save();
 
