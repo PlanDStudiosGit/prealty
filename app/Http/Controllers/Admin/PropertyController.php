@@ -153,7 +153,10 @@ class PropertyController extends Controller
         $property->type = $request->type;
         $property->address = $request->address;
         $property->price = $request->price;
-        $property->bedrooms = $request->bedrooms;
+        $property->lot_size = $request->lot_size;
+
+
+        $property->bedroom = $request->bedroom;
 
         $property->master_bedroom_area = $request->master_bedroom_area;
         $property->master_bedroom_length = $request->master_bedroom_length;
@@ -215,15 +218,119 @@ class PropertyController extends Controller
         $property->bedroom_10_level = $request->bedroom_10_level;
         $property->bedroom_10_features = $request->bedroom_10_features;
         
-        $property->bathrooms = $request->bathrooms;
+        $property->living_room_area = $request->living_room_area;
+        $property->living_room_length = $request->living_room_length;
+        $property->living_room_width = $request->living_room_width;
+        $property->living_room_level = $request->living_room_level;
+        $property->living_room_features = $request->living_room_features;
+
+
+        $property->dining_room_area = $request->dining_room_area;
+        $property->dining_room_length = $request->dining_room_length;
+        $property->dining_room_width = $request->dining_room_width;
+        $property->dining_room_level = $request->dining_room_level;
+        $property->dining_room_features = $request->dining_room_features;
+
+        $property->family_room_area = $request->family_room_area;
+        $property->family_room_length = $request->family_room_length;
+        $property->family_room_width = $request->family_room_width;
+        $property->family_room_level = $request->family_room_level;
+        $property->family_room_features = $request->family_room_features;
+
+
+        $property->basement_area = $request->basement_area;
+        $property->basement_length = $request->basement_length;
+        $property->basement_width = $request->basement_width;
+        $property->basement_features = $request->basement_features;
+
+        $property->kitchen_area = $request->kitchen_area;
+        $property->kitchen_length = $request->kitchen_length;
+        $property->kitchen_width = $request->kitchen_width;
+        $property->kitchen_level = $request->kitchen_level;
+        $property->kitchen_features = $request->kitchen_features;
+
+        $property->bathroom = $request->bathroom;
+        $property->half_bathrooms = $request->half_bathrooms;
+        $property->master_bathroom = $request->master_bathroom;
+
+
+        $property->bathroom_1_area = $request->bathroom_1_area;
+        $property->bathroom_1_length = $request->bathroom_1_length;
+        $property->bathroom_1_width = $request->bathroom_1_width;
+        $property->bathroom_1_level = $request->bathroom_1_level;
+        $property->bathroom_1_features = $request->bathroom_1_features;
+
+        $property->bathroom_2_area = $request->bathroom_2_area;
+        $property->bathroom_2_length = $request->bathroom_2_length;
+        $property->bathroom_2_width = $request->bathroom_2_width;
+        $property->bathroom_2_level = $request->bathroom_2_level;
+        $property->bathroom_2_features = $request->bathroom_2_features;
+
+        $property->bathroom_3_area = $request->bathroom_3_area;
+        $property->bathroom_3_length = $request->bathroom_3_length;
+        $property->bathroom_3_width = $request->bathroom_3_width;
+        $property->bathroom_3_level = $request->bathroom_3_level;
+        $property->bathroom_3_features = $request->bathroom_3_features;
+
+        $property->bathroom_4_area = $request->bathroom_4_area;
+        $property->bathroom_4_length = $request->bathroom_4_length;
+        $property->bathroom_4_width = $request->bathroom_4_width;
+        $property->bathroom_4_level = $request->bathroom_4_level;
+        $property->bathroom_4_features = $request->bathroom_4_features;
+
+        $property->bathroom_5_area = $request->bathroom_5_area;
+        $property->bathroom_5_length = $request->bathroom_5_length;
+        $property->bathroom_5_width = $request->bathroom_5_width;
+        $property->bathroom_5_level = $request->bathroom_5_level;
+        $property->bathroom_5_features = $request->bathroom_5_features;
+
+        $property->bathroom_6_area = $request->bathroom_6_area;
+        $property->bathroom_6_length = $request->bathroom_6_length;
+        $property->bathroom_6_width = $request->bathroom_6_width;
+        $property->bathroom_6_level = $request->bathroom_6_level;
+        $property->bathroom_6_features = $request->bathroom_6_features;
+
+        $property->bathroom_7_area = $request->bathroom_7_area;
+        $property->bathroom_7_length = $request->bathroom_7_length;
+        $property->bathroom_7_width = $request->bathroom_7_width;
+        $property->bathroom_7_level = $request->bathroom_7_level;
+        $property->bathroom_7_features = $request->bathroom_7_features;
+
+        $property->bathroom_8_area = $request->bathroom_8_area;
+        $property->bathroom_8_length = $request->bathroom_8_length;
+        $property->bathroom_8_width = $request->bathroom_8_width;
+        $property->bathroom_8_level = $request->bathroom_8_level;
+        $property->bathroom_8_features = $request->bathroom_8_features;
+
+        $property->bathroom_9_area = $request->bathroom_9_area;
+        $property->bathroom_9_length = $request->bathroom_9_length;
+        $property->bathroom_9_width = $request->bathroom_9_width;
+        $property->bathroom_9_level = $request->bathroom_9_level;
+        $property->bathroom_9_features = $request->bathroom_9_features;
+
+        $property->bathroom_10_area = $request->bathroom_10_area;
+        $property->bathroom_10_length = $request->bathroom_10_length;
+        $property->bathroom_10_width = $request->bathroom_10_width;
+        $property->bathroom_10_level = $request->bathroom_10_level;
+        $property->bathroom_10_features = $request->bathroom_10_features;
+
+        $property->laundry = $request->laundry;
+        $property->appliances = $request->appliances;
+
+
         $property->has_garage = $request->has_garage;
         $property->open_parking = $request->open_parking;
         $property->total_garage = $request->total_garage;
         $property->covered_garage = $request->covered_garage;
+        $property->total_parking = $request->total_parking;
+        $property->parking_features = $request->parking_features;   
 
         $property->hot_properties = $request->hot_properties;
 
         $property->description = $request->description;
+
+        // echo '<pre>';
+        // print_r($property);exit;
         $property->save();
 
 
@@ -301,21 +408,86 @@ class PropertyController extends Controller
         $property->type = $request->type;
         $property->address = $request->address;
         $property->price = $request->price;
-        $property->bedrooms = $request->bedrooms;
-        $property->bathrooms = $request->bathrooms;
-        $property->garage = $request->garage;
         $property->lot_size = $request->lot_size;
-        $property->elevator = $request->elevator;
-        $property->fireplace = $request->fireplace;
-        $property->gated = $request->gated;
-        $property->garden = $request->garden;
-        $property->balcony = $request->balcony;
-        $property->terrace = $request->terrace;
-        $property->pool = $request->pool;
-        $property->basement = $request->basement;
-        $property->furnished = $request->furnished;
+
+        
+        $property->bedroom = $request->bedroom;
+
+        $property->master_bedroom_area = $request->master_bedroom_area;
+        $property->master_bedroom_length = $request->master_bedroom_length;
+        $property->master_bedroom_width = $request->master_bedroom_width;
+        $property->master_bedroom_level = $request->master_bedroom_level;
+        $property->master_bedroom_features = $request->master_bedroom_features;
+
+        $property->bedroom_2_area = $request->bedroom_2_area;
+        $property->bedroom_2_length = $request->bedroom_2_length;
+        $property->bedroom_2_width = $request->bedroom_2_width;
+        $property->bedroom_2_level = $request->bedroom_2_level;
+        $property->bedroom_2_features = $request->bedroom_2_features;
+
+        $property->bedroom_3_area = $request->bedroom_3_area;
+        $property->bedroom_3_length = $request->bedroom_3_length;
+        $property->bedroom_3_width = $request->bedroom_3_width;
+        $property->bedroom_3_level = $request->bedroom_3_level;
+        $property->bedroom_3_features = $request->bedroom_3_features;
+
+        $property->bedroom_4_area = $request->bedroom_4_area;
+        $property->bedroom_4_length = $request->bedroom_4_length;
+        $property->bedroom_4_width = $request->bedroom_4_width;
+        $property->bedroom_4_level = $request->bedroom_4_level;
+        $property->bedroom_4_features = $request->bedroom_4_features;
+
+        $property->bedroom_5_area = $request->bedroom_5_area;
+        $property->bedroom_5_length = $request->bedroom_5_length;
+        $property->bedroom_5_width = $request->bedroom_5_width;
+        $property->bedroom_5_level = $request->bedroom_5_level;
+        $property->bedroom_5_features = $request->bedroom_5_features;
+
+        $property->bedroom_6_area = $request->bedroom_6_area;
+        $property->bedroom_6_length = $request->bedroom_6_length;
+        $property->bedroom_6_width = $request->bedroom_6_width;
+        $property->bedroom_6_level = $request->bedroom_6_level;
+        $property->bedroom_6_features = $request->bedroom_6_features;
+
+        $property->bedroom_7_area = $request->bedroom_7_area;
+        $property->bedroom_7_length = $request->bedroom_7_length;
+        $property->bedroom_7_width = $request->bedroom_7_width;
+        $property->bedroom_7_level = $request->bedroom_7_level;
+        $property->bedroom_7_features = $request->bedroom_7_features;
+
+        $property->bedroom_8_area = $request->bedroom_8_area;
+        $property->bedroom_8_length = $request->bedroom_8_length;
+        $property->bedroom_8_width = $request->bedroom_8_width;
+        $property->bedroom_8_level = $request->bedroom_8_level;
+        $property->bedroom_8_features = $request->bedroom_8_features;
+
+        $property->bedroom_9_area = $request->bedroom_9_area;
+        $property->bedroom_9_length = $request->bedroom_9_length;
+        $property->bedroom_9_width = $request->bedroom_9_width;
+        $property->bedroom_9_level = $request->bedroom_9_level;
+        $property->bedroom_9_features = $request->bedroom_9_features;
+
+        $property->bedroom_10_area = $request->bedroom_10_area;
+        $property->bedroom_10_length = $request->bedroom_10_length;
+        $property->bedroom_10_width = $request->bedroom_10_width;
+        $property->bedroom_10_level = $request->bedroom_10_level;
+        $property->bedroom_10_features = $request->bedroom_10_features;
+        
+        $property->living_room_area = $request->living_room_area;
+        $property->living_room_length = $request->living_room_length;
+        $property->living_room_width = $request->living_room_width;
+        $property->living_room_level = $request->living_room_level;
+
+        $property->bathrooms = $request->bathrooms;
+        $property->has_garage = $request->has_garage;
+        $property->open_parking = $request->open_parking;
+        $property->total_garage = $request->total_garage;
+        $property->covered_garage = $request->covered_garage;
+        $property->total_parking = $request->total_parking;
+        $property->parking_features = $request->parking_features;   
+
         $property->hot_properties = $request->hot_properties;
-        $property->company_profit = $request->company_profit;
+
         $property->description = $request->description;
         $property->save();
 

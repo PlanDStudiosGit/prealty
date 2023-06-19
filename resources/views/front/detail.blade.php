@@ -286,12 +286,12 @@ img.lightbox-image {
                             <div class="property-detail mb-4 bg-lgrey p-4 border">
                                 <h4 class="border-b pb-2">Property Details</h4>
                                 <div class="row">
-                                <h5 class="border-b pb-2">Bedrooms</h5>
+                                <h5 class="border-b pb-2">Bedroom</h5>
                                 <div class="col-lg-12">
-                                  <p>Bedrooms: {{$property->bedrooms}}</p>
+                                  <p>Bedroom: {{$property->bedroom}}</p>
                                 </div>
 
-                                @if($property->bedrooms == 1)
+                                @if($property->bedroom == 1)
                                 <div class="col-lg-12">
                                   <p style="font-weight:600">Master Bedroom</p>
                                 </div> 
@@ -318,7 +318,7 @@ img.lightbox-image {
                              
                                 @endif
 
-                                @if($property->bedrooms == 2)
+                                @if($property->bedroom == 2)
                                 <div class="col-lg-12">
                                   <p style="font-weight:600">Master Bedroom</p>
                                 </div> 
@@ -370,7 +370,7 @@ img.lightbox-image {
                                 @endif
 
                                 
-                                @if($property->bedrooms == 3)
+                                @if($property->bedroom == 3)
                                 <div class="col-lg-12">
                                   <p style="font-weight:600">Master Bedroom</p>
                                 </div> 
@@ -447,7 +447,7 @@ img.lightbox-image {
                                 @endif
 
                                 
-                                @if($property->bedrooms == 4)
+                                @if($property->bedroom == 4)
                                 <div class="col-lg-12">
                                   <p style="font-weight:600">Master Bedroom</p>
                                 </div> 
@@ -547,7 +547,7 @@ img.lightbox-image {
 
                                 @endif
 
-                                @if($property->bedrooms == 5)
+                                @if($property->bedroom == 5)
                                 <div class="col-lg-12">
                                   <p style="font-weight:600">Master Bedroom</p>
                                 </div> 
@@ -672,7 +672,7 @@ img.lightbox-image {
 
                                 @endif
 
-                                @if($property->bedrooms == 6)
+                                @if($property->bedroom == 6)
                                 <div class="col-lg-12">
                                   <p style="font-weight:600">Master Bedroom</p>
                                 </div> 
@@ -822,7 +822,7 @@ img.lightbox-image {
 
                                 @endif
 
-                                @if($property->bedrooms == 7)
+                                @if($property->bedroom == 7)
                                 <div class="col-lg-12">
                                   <p style="font-weight:600">Master Bedroom</p>
                                 </div> 
@@ -998,7 +998,7 @@ img.lightbox-image {
 
                                 @endif
 
-                                @if($property->bedrooms == 8)
+                                @if($property->bedroom == 8)
                                 <div class="col-lg-12">
                                   <p style="font-weight:600">Master Bedroom</p>
                                 </div> 
@@ -1200,7 +1200,7 @@ img.lightbox-image {
 
                                 @endif
 
-                                @if($property->bedrooms == 9)
+                                @if($property->bedroom == 9)
                                 <div class="col-lg-12">
                                   <p style="font-weight:600">Master Bedroom</p>
                                 </div> 
@@ -1427,7 +1427,7 @@ img.lightbox-image {
                       
                                 @endif
                                 
-                                @if($property->bedrooms == 10)
+                                @if($property->bedroom == 10)
                                 <div class="col-lg-12">
                                   <p style="font-weight:600">Master Bedroom</p>
                                 </div> 
@@ -1681,6 +1681,1491 @@ img.lightbox-image {
 
                                 @endif
 
+                                <h5 class="border-b pb-2">Living Room</h5>
+                                <div class="col-lg-4">
+                                  <p>Area: {{$property->living_room_area}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Length: {{$property->living_room_length}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>width: {{$property->living_room_width}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Level: {{$property->living_room_level}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Featues: {{$property->living_room_features}}</p>
+                                </div>
+
+                                
+                                <!-- Dining room  -->
+                                <h5 class="border-b pb-2">Dining Room</h5>
+                                <div class="col-lg-4">
+                                  <p>Area: {{$property->dining_room_area}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Length: {{$property->dining_room_length}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>width: {{$property->dining_room_width}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Level: {{$property->dining_room_level}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Featues: {{$property->dining_room_features}}</p>
+                                </div>
+
+                                <!-- Family room  -->
+                                <h5 class="border-b pb-2">Family Room</h5>
+                                <div class="col-lg-4">
+                                  <p>Area: {{$property->family_room_area}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Length: {{$property->family_room_length}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>width: {{$property->family_room_width}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Level: {{$property->family_room_level}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Featues: {{$property->family_room_features}}</p>
+                                </div>
+
+
+                                <!-- Basements -->
+                                <h5 class="border-b pb-2">Basement</h5>
+                                <div class="col-lg-4">
+                                  <p>Area: {{$property->basment_area}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Length: {{$property->basment_length}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>width: {{$property->basment_width}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Featues: {{$property->basment_features}}</p>
+                                </div>
+
+
+                                <!-- bathroom  -->
+                                <h5 class="border-b pb-2">Bathrooms</h5>
+                                <div class="col-lg-12">
+                                  <p>Bathrooms: {{$property->bathrooms}}</p>
+                                </div>
+
+                                @if($property->bathroom == 1)
+                                <div class="col-lg-12">
+                                  <p style="font-weight:600">Bathrooms</p>
+                                </div> 
+                                <div class="col-lg-4">
+                                  <p>Area: {{$property->bathroom_1_area}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Length: {{$property->bathroom_1_length}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>width: {{$property->bathroom_1_width}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Level: {{$property->bathroom_1_level}}</p>
+                                </div>
+
+                                <div class="col-lg-6">
+                                  <p>Features: {{$property->bathroom_1_features}}</p>
+                                </div>
+
+                             
+                                @endif
+
+                                @if($property->bathroom == 2)
+                                <div class="col-lg-12">
+                                  <p style="font-weight:600">Bathroom</p>
+                                </div> 
+                                <div class="col-lg-4">
+                                  <p>Area: {{$property->bathroom_1_area}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Length: {{$property->bathroom_1_length}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>width: {{$property->bathroom_1_width}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Level: {{$property->bathroom_1_level}}</p>
+                                </div>
+
+                                <div class="col-lg-6">
+                                  <p>Features: {{$property->bathroom_1_features}}</p>
+                                </div>
+
+                                <!-- bathroom 2 -->
+                                <div class="col-lg-12">
+                                <p style="font-weight:600">Bathroom 2</p>
+                                </div> 
+                                <div class="col-lg-4">
+                                  <p>Area: {{$property->bathroom_2_area}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Length: {{$property->bathroom_2_length}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>width: {{$property->bathroom_2_width}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Level: {{$property->bathroom_2_level}}</p>
+                                </div>
+
+                                <div class="col-lg-6">
+                                  <p>Features: {{$property->bathroom_2_features}}</p>
+                                </div>
+
+
+                                @endif
+
+                                
+                                @if($property->bathroom == 3)
+                                <div class="col-lg-12">
+                                  <p style="font-weight:600">Master Bathroom</p>
+                                </div> 
+                                <div class="col-lg-4">
+                                  <p>Area: {{$property->bathroom_1_area}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Length: {{$property->bathroom_1_length}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>width: {{$property->bathroom_1_width}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Level: {{$property->bathroom_1_level}}</p>
+                                </div>
+
+                                <div class="col-lg-6">
+                                  <p>Features: {{$property->bathroom_1_features}}</p>
+                                </div>
+
+                                <!-- bathroom 2 -->
+                                <div class="col-lg-12">
+                                <p style="font-weight:600">Bathroom 2</p>
+                                </div> 
+                                <div class="col-lg-4">
+                                  <p>Area: {{$property->bathroom_2_area}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Length: {{$property->bathroom_2_length}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>width: {{$property->bathroom_2_width}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Level: {{$property->bathroom_2_level}}</p>
+                                </div>
+
+                                <div class="col-lg-6">
+                                  <p>Features: {{$property->bathroom_2_features}}</p>
+                                </div>
+
+
+                                 <!-- bathroom 3 -->
+                                 <div class="col-lg-12">
+                                 <p style="font-weight:600">Bathroom 3</p>
+                                </div> 
+                                <div class="col-lg-4">
+                                  <p>Area: {{$property->bathroom_3_area}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Length: {{$property->bathroom_3_length}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>width: {{$property->bathroom_3_width}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Level: {{$property->bathroom_3_level}}</p>
+                                </div>
+
+                                <div class="col-lg-6">
+                                  <p>Features: {{$property->bathroom_3_features}}</p>
+                                </div>
+
+
+                                @endif
+
+                                
+                                @if($property->bathroom == 4)
+                                <div class="col-lg-12">
+                                  <p style="font-weight:600">Master Bathroom</p>
+                                </div> 
+                                <div class="col-lg-4">
+                                  <p>Area: {{$property->bathroom_1_area}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Length: {{$property->bathroom_1_length}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>width: {{$property->bathroom_1_width}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Level: {{$property->bathroom_1_level}}</p>
+                                </div>
+
+                                <div class="col-lg-6">
+                                  <p>Features: {{$property->bathroom_1_features}}</p>
+                                </div>
+
+                                <!-- bathroom 2 -->
+                                <div class="col-lg-12">
+                                <p style="font-weight:600">Bathroom 2</p>
+                                </div> 
+                                <div class="col-lg-4">
+                                  <p>Area: {{$property->bathroom_2_area}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Length: {{$property->bathroom_2_length}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>width: {{$property->bathroom_2_width}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Level: {{$property->bathroom_2_level}}</p>
+                                </div>
+
+                                <div class="col-lg-6">
+                                  <p>Features: {{$property->bathroom_2_features}}</p>
+                                </div>
+
+
+                                 <!-- bathroom 3 -->
+                                 <div class="col-lg-12">
+                                 <p style="font-weight:600">Bathroom 3</p>
+                                </div> 
+                                <div class="col-lg-4">
+                                  <p>Area: {{$property->bathroom_3_area}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Length: {{$property->bathroom_3_length}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>width: {{$property->bathroom_3_width}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Level: {{$property->bathroom_3_level}}</p>
+                                </div>
+
+                                <div class="col-lg-6">
+                                  <p>Features: {{$property->bathroom_3_features}}</p>
+                                </div>
+
+
+                                 <!-- bathroom 4 -->
+                                 <div class="col-lg-12">
+                                 <p style="font-weight:600">Bathroom 4</p>
+                                </div> 
+                                <div class="col-lg-4">
+                                  <p>Area: {{$property->bathroom_4_area}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Length: {{$property->bathroom_4_length}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>width: {{$property->bathroom_4_width}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Level: {{$property->bathroom_4_level}}</p>
+                                </div>
+
+                                <div class="col-lg-6">
+                                  <p>Features: {{$property->bathroom_4_features}}</p>
+                                </div>
+
+                                @endif
+
+                                @if($property->bathroom == 5)
+                                <div class="col-lg-12">
+                                  <p style="font-weight:600">Master Bathroom</p>
+                                </div> 
+                                <div class="col-lg-4">
+                                  <p>Area: {{$property->bathroom_1_area}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Length: {{$property->bathroom_1_length}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>width: {{$property->bathroom_1_width}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Level: {{$property->bathroom_1_level}}</p>
+                                </div>
+
+                                <div class="col-lg-6">
+                                  <p>Features: {{$property->bathroom_1_features}}</p>
+                                </div>
+
+                                <!-- bathroom 2 -->
+                                <div class="col-lg-12">
+                                <p style="font-weight:600">Bathroom 2</p>
+                                </div> 
+                                <div class="col-lg-4">
+                                  <p>Area: {{$property->bathroom_2_area}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Length: {{$property->bathroom_2_length}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>width: {{$property->bathroom_2_width}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Level: {{$property->bathroom_2_level}}</p>
+                                </div>
+
+                                <div class="col-lg-6">
+                                  <p>Features: {{$property->bathroom_2_features}}</p>
+                                </div>
+
+
+                                 <!-- bathroom 3 -->
+                                 <div class="col-lg-12">
+                                 <p style="font-weight:600">Bathroom 3</p>
+                                </div> 
+                                <div class="col-lg-4">
+                                  <p>Area: {{$property->bathroom_3_area}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Length: {{$property->bathroom_3_length}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>width: {{$property->bathroom_3_width}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Level: {{$property->bathroom_3_level}}</p>
+                                </div>
+
+                                <div class="col-lg-6">
+                                  <p>Features: {{$property->bathroom_3_features}}</p>
+                                </div>
+
+
+                                 <!-- bathroom 4 -->
+                                 <div class="col-lg-12">
+                                 <p style="font-weight:600">Bathroom 4</p>
+                                </div> 
+                                <div class="col-lg-4">
+                                  <p>Area: {{$property->bathroom_4_area}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Length: {{$property->bathroom_4_length}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>width: {{$property->bathroom_4_width}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Level: {{$property->bathroom_4_level}}</p>
+                                </div>
+
+                                <div class="col-lg-6">
+                                  <p>Features: {{$property->bathroom_4_features}}</p>
+                                </div>
+
+
+                                 <!-- bathroom 5 -->
+                                 <div class="col-lg-12">
+                                 <p style="font-weight:600">Bathroom 5</p>
+                                </div> 
+                                <div class="col-lg-4">
+                                  <p>Area: {{$property->bathroom_5_area}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Length: {{$property->bathroom_5_length}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>width: {{$property->bathroom_5_width}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Level: {{$property->bathroom_5_level}}</p>
+                                </div>
+
+                                <div class="col-lg-6">
+                                  <p>Features: {{$property->bathroom_5_features}}</p>
+                                </div>
+
+                                @endif
+
+                                @if($property->bathroom == 6)
+                                <div class="col-lg-12">
+                                  <p style="font-weight:600">Master Bathroom</p>
+                                </div> 
+                                <div class="col-lg-4">
+                                  <p>Area: {{$property->bathroom_1_area}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Length: {{$property->bathroom_1_length}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>width: {{$property->bathroom_1_width}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Level: {{$property->bathroom_1_level}}</p>
+                                </div>
+
+                                <div class="col-lg-6">
+                                  <p>Features: {{$property->bathroom_1_features}}</p>
+                                </div>
+
+                                <!-- bathroom 2 -->
+                                <div class="col-lg-12">
+                                <p style="font-weight:600">Bathroom 2</p>
+                                </div> 
+                                <div class="col-lg-4">
+                                  <p>Area: {{$property->bathroom_2_area}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Length: {{$property->bathroom_2_length}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>width: {{$property->bathroom_2_width}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Level: {{$property->bathroom_2_level}}</p>
+                                </div>
+
+                                <div class="col-lg-6">
+                                  <p>Features: {{$property->bathroom_2_features}}</p>
+                                </div>
+
+
+                                 <!-- bathroom 3 -->
+                                 <div class="col-lg-12">
+                                 <p style="font-weight:600">Bathroom 3</p>
+                                </div> 
+                                <div class="col-lg-4">
+                                  <p>Area: {{$property->bathroom_3_area}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Length: {{$property->bathroom_3_length}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>width: {{$property->bathroom_3_width}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Level: {{$property->bathroom_3_level}}</p>
+                                </div>
+
+                                <div class="col-lg-6">
+                                  <p>Features: {{$property->bathroom_3_features}}</p>
+                                </div>
+
+
+                                 <!-- bathroom 4 -->
+                                 <div class="col-lg-12">
+                                 <p style="font-weight:600">Bathroom 4</p>
+                                </div> 
+                                <div class="col-lg-4">
+                                  <p>Area: {{$property->bathroom_4_area}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Length: {{$property->bathroom_4_length}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>width: {{$property->bathroom_4_width}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Level: {{$property->bathroom_4_level}}</p>
+                                </div>
+
+                                <div class="col-lg-6">
+                                  <p>Features: {{$property->bathroom_4_features}}</p>
+                                </div>
+
+
+                                 <!-- bathroom 5 -->
+                                 <div class="col-lg-12">
+                                 <p style="font-weight:600">Bathroom 5</p>
+                                </div> 
+                                <div class="col-lg-4">
+                                  <p>Area: {{$property->bathroom_5_area}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Length: {{$property->bathroom_5_length}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>width: {{$property->bathroom_5_width}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Level: {{$property->bathroom_5_level}}</p>
+                                </div>
+
+                                <div class="col-lg-6">
+                                  <p>Features: {{$property->bathroom_5_features}}</p>
+                                </div>
+
+
+                                 <!-- bathroom 6 -->
+                                 <div class="col-lg-12">
+                                 <p style="font-weight:600">Bathroom 6</p>
+                                </div> 
+                                <div class="col-lg-4">
+                                  <p>Area: {{$property->bathroom_6_area}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Length: {{$property->bathroom_6_length}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>width: {{$property->bathroom_6_width}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Level: {{$property->bathroom_6_level}}</p>
+                                </div>
+
+                                <div class="col-lg-6">
+                                  <p>Features: {{$property->bathroom_6_features}}</p>
+                                </div>
+
+                                @endif
+
+                                @if($property->bathroom == 7)
+                                <div class="col-lg-12">
+                                  <p style="font-weight:600">Master Bathroom</p>
+                                </div> 
+                                <div class="col-lg-4">
+                                  <p>Area: {{$property->bathroom_1_area}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Length: {{$property->bathroom_1_length}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>width: {{$property->bathroom_1_width}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Level: {{$property->bathroom_1_level}}</p>
+                                </div>
+
+                                <div class="col-lg-6">
+                                  <p>Features: {{$property->bathroom_1_features}}</p>
+                                </div>
+
+                                <!-- bathroom 2 -->
+                                <div class="col-lg-12">
+                                <p style="font-weight:600">Bathroom 2</p>
+                                </div> 
+                                <div class="col-lg-4">
+                                  <p>Area: {{$property->bathroom_2_area}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Length: {{$property->bathroom_2_length}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>width: {{$property->bathroom_2_width}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Level: {{$property->bathroom_2_level}}</p>
+                                </div>
+
+                                <div class="col-lg-6">
+                                  <p>Features: {{$property->bathroom_2_features}}</p>
+                                </div>
+
+
+                                 <!-- bathroom 3 -->
+                                 <div class="col-lg-12">
+                                 <p style="font-weight:600">Bathroom 3</p>
+                                </div> 
+                                <div class="col-lg-4">
+                                  <p>Area: {{$property->bathroom_3_area}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Length: {{$property->bathroom_3_length}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>width: {{$property->bathroom_3_width}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Level: {{$property->bathroom_3_level}}</p>
+                                </div>
+
+                                <div class="col-lg-6">
+                                  <p>Features: {{$property->bathroom_3_features}}</p>
+                                </div>
+
+
+                                 <!-- bathroom 4 -->
+                                 <div class="col-lg-12">
+                                 <p style="font-weight:600">Bathroom 4</p>
+                                </div> 
+                                <div class="col-lg-4">
+                                  <p>Area: {{$property->bathroom_4_area}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Length: {{$property->bathroom_4_length}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>width: {{$property->bathroom_4_width}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Level: {{$property->bathroom_4_level}}</p>
+                                </div>
+
+                                <div class="col-lg-6">
+                                  <p>Features: {{$property->bathroom_4_features}}</p>
+                                </div>
+
+
+                                 <!-- bathroom 5 -->
+                                 <div class="col-lg-12">
+                                 <p style="font-weight:600">Bathroom 5</p>
+                                </div> 
+                                <div class="col-lg-4">
+                                  <p>Area: {{$property->bathroom_5_area}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Length: {{$property->bathroom_5_length}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>width: {{$property->bathroom_5_width}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Level: {{$property->bathroom_5_level}}</p>
+                                </div>
+
+                                <div class="col-lg-6">
+                                  <p>Features: {{$property->bathroom_5_features}}</p>
+                                </div>
+
+
+                                 <!-- bathroom 6 -->
+                                 <div class="col-lg-12">
+                                 <p style="font-weight:600">Bathroom 6</p>
+                                </div> 
+                                <div class="col-lg-4">
+                                  <p>Area: {{$property->bathroom_6_area}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Length: {{$property->bathroom_6_length}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>width: {{$property->bathroom_6_width}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Level: {{$property->bathroom_6_level}}</p>
+                                </div>
+
+                                <div class="col-lg-6">
+                                  <p>Features: {{$property->bathroom_6_features}}</p>
+                                </div>
+
+
+                                 <!-- bathroom 7 -->
+                                 <div class="col-lg-12">
+                                 <p style="font-weight:600">Bathroom 7</p>
+                                </div> 
+                                <div class="col-lg-4">
+                                  <p>Area: {{$property->bathroom_7_area}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Length: {{$property->bathroom_7_length}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>width: {{$property->bathroom_7_width}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Level: {{$property->bathroom_7_level}}</p>
+                                </div>
+
+                                <div class="col-lg-6">
+                                  <p>Features: {{$property->bathroom_7_features}}</p>
+                                </div>
+
+
+                                @endif
+
+                                @if($property->bathroom == 8)
+                                <div class="col-lg-12">
+                                  <p style="font-weight:600">Master Bathroom</p>
+                                </div> 
+                                <div class="col-lg-4">
+                                  <p>Area: {{$property->bathroom_1_area}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Length: {{$property->bathroom_1_length}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>width: {{$property->bathroom_1_width}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Level: {{$property->bathroom_1_level}}</p>
+                                </div>
+
+                                <div class="col-lg-6">
+                                  <p>Features: {{$property->bathroom_1_features}}</p>
+                                </div>
+
+                                <!-- bathroom 2 -->
+                                <div class="col-lg-12">
+                                <p style="font-weight:600">Bathroom 2</p>
+                                </div> 
+                                <div class="col-lg-4">
+                                  <p>Area: {{$property->bathroom_2_area}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Length: {{$property->bathroom_2_length}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>width: {{$property->bathroom_2_width}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Level: {{$property->bathroom_2_level}}</p>
+                                </div>
+
+                                <div class="col-lg-6">
+                                  <p>Features: {{$property->bathroom_2_features}}</p>
+                                </div>
+
+
+                                 <!-- bathroom 3 -->
+                                 <div class="col-lg-12">
+                                 <p style="font-weight:600">Bathroom 3</p>
+                                </div> 
+                                <div class="col-lg-4">
+                                  <p>Area: {{$property->bathroom_3_area}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Length: {{$property->bathroom_3_length}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>width: {{$property->bathroom_3_width}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Level: {{$property->bathroom_3_level}}</p>
+                                </div>
+
+                                <div class="col-lg-6">
+                                  <p>Features: {{$property->bathroom_3_features}}</p>
+                                </div>
+
+
+                                 <!-- bathroom 4 -->
+                                 <div class="col-lg-12">
+                                 <p style="font-weight:600">Bathroom 4</p>
+                                </div> 
+                                <div class="col-lg-4">
+                                  <p>Area: {{$property->bathroom_4_area}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Length: {{$property->bathroom_4_length}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>width: {{$property->bathroom_4_width}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Level: {{$property->bathroom_4_level}}</p>
+                                </div>
+
+                                <div class="col-lg-6">
+                                  <p>Features: {{$property->bathroom_4_features}}</p>
+                                </div>
+
+
+                                 <!-- bathroom 5 -->
+                                 <div class="col-lg-12">
+                                 <p style="font-weight:600">Bathroom 5</p>
+                                </div> 
+                                <div class="col-lg-4">
+                                  <p>Area: {{$property->bathroom_5_area}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Length: {{$property->bathroom_5_length}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>width: {{$property->bathroom_5_width}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Level: {{$property->bathroom_5_level}}</p>
+                                </div>
+
+                                <div class="col-lg-6">
+                                  <p>Features: {{$property->bathroom_5_features}}</p>
+                                </div>
+
+
+                                 <!-- bathroom 6 -->
+                                 <div class="col-lg-12">
+                                 <p style="font-weight:600">Bathroom 6</p>
+                                </div> 
+                                <div class="col-lg-4">
+                                  <p>Area: {{$property->bathroom_6_area}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Length: {{$property->bathroom_6_length}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>width: {{$property->bathroom_6_width}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Level: {{$property->bathroom_6_level}}</p>
+                                </div>
+
+                                <div class="col-lg-6">
+                                  <p>Features: {{$property->bathroom_6_features}}</p>
+                                </div>
+
+
+                                 <!-- bathroom 7 -->
+                                 <div class="col-lg-12">
+                                 <p style="font-weight:600">Bathroom 7</p>
+                                </div> 
+                                <div class="col-lg-4">
+                                  <p>Area: {{$property->bathroom_7_area}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Length: {{$property->bathroom_7_length}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>width: {{$property->bathroom_7_width}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Level: {{$property->bathroom_7_level}}</p>
+                                </div>
+
+                                <div class="col-lg-6">
+                                  <p>Features: {{$property->bathroom_7_features}}</p>
+                                </div>
+
+
+                                 <!-- bathroom 8 -->
+                                 <div class="col-lg-12">
+                                 <p style="font-weight:600">Bathroom 8</p>
+                                </div> 
+                                <div class="col-lg-4">
+                                  <p>Area: {{$property->bathroom_8_area}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Length: {{$property->bathroom_8_length}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>width: {{$property->bathroom_8_width}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Level: {{$property->bathroom_8_level}}</p>
+                                </div>
+
+                                <div class="col-lg-6">
+                                  <p>Features: {{$property->bathroom_8_features}}</p>
+                                </div>
+
+
+
+                                @endif
+
+                                @if($property->bathroom == 9)
+                                <div class="col-lg-12">
+                                  <p style="font-weight:600">Master Bathroom</p>
+                                </div> 
+                                <div class="col-lg-4">
+                                  <p>Area: {{$property->bathroom_1_area}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Length: {{$property->bathroom_1_length}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>width: {{$property->bathroom_1_width}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Level: {{$property->bathroom_1_level}}</p>
+                                </div>
+
+                                <div class="col-lg-6">
+                                  <p>Features: {{$property->bathroom_1_features}}</p>
+                                </div>
+
+                                <!-- bathroom 2 -->
+                                <div class="col-lg-12">
+                                <p style="font-weight:600">Bathroom 2</p>
+                                </div> 
+                                <div class="col-lg-4">
+                                  <p>Area: {{$property->bathroom_2_area}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Length: {{$property->bathroom_2_length}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>width: {{$property->bathroom_2_width}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Level: {{$property->bathroom_2_level}}</p>
+                                </div>
+
+                                <div class="col-lg-6">
+                                  <p>Features: {{$property->bathroom_2_features}}</p>
+                                </div>
+
+
+                                 <!-- bathroom 3 -->
+                                 <div class="col-lg-12">
+                                 <p style="font-weight:600">Bathroom 3</p>
+                                </div> 
+                                <div class="col-lg-4">
+                                  <p>Area: {{$property->bathroom_3_area}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Length: {{$property->bathroom_3_length}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>width: {{$property->bathroom_3_width}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Level: {{$property->bathroom_3_level}}</p>
+                                </div>
+
+                                <div class="col-lg-6">
+                                  <p>Features: {{$property->bathroom_3_features}}</p>
+                                </div>
+
+
+                                 <!-- bathroom 4 -->
+                                 <div class="col-lg-12">
+                                 <p style="font-weight:600">Bathroom 4</p>
+                                </div> 
+                                <div class="col-lg-4">
+                                  <p>Area: {{$property->bathroom_4_area}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Length: {{$property->bathroom_4_length}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>width: {{$property->bathroom_4_width}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Level: {{$property->bathroom_4_level}}</p>
+                                </div>
+
+                                <div class="col-lg-6">
+                                  <p>Features: {{$property->bathroom_4_features}}</p>
+                                </div>
+
+
+                                 <!-- bathroom 5 -->
+                                 <div class="col-lg-12">
+                                 <p style="font-weight:600">Bathroom 5</p>
+                                </div> 
+                                <div class="col-lg-4">
+                                  <p>Area: {{$property->bathroom_5_area}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Length: {{$property->bathroom_5_length}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>width: {{$property->bathroom_5_width}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Level: {{$property->bathroom_5_level}}</p>
+                                </div>
+
+                                <div class="col-lg-6">
+                                  <p>Features: {{$property->bathroom_5_features}}</p>
+                                </div>
+
+
+                                 <!-- bathroom 6 -->
+                                 <div class="col-lg-12">
+                                 <p style="font-weight:600">Bathroom 6</p>
+                                </div> 
+                                <div class="col-lg-4">
+                                  <p>Area: {{$property->bathroom_6_area}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Length: {{$property->bathroom_6_length}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>width: {{$property->bathroom_6_width}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Level: {{$property->bathroom_6_level}}</p>
+                                </div>
+
+                                <div class="col-lg-6">
+                                  <p>Features: {{$property->bathroom_6_features}}</p>
+                                </div>
+
+
+                                 <!-- bathroom 7 -->
+                                 <div class="col-lg-12">
+                                 <p style="font-weight:600">Bathroom 7</p>
+                                </div> 
+                                <div class="col-lg-4">
+                                  <p>Area: {{$property->bathroom_7_area}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Length: {{$property->bathroom_7_length}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>width: {{$property->bathroom_7_width}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Level: {{$property->bathroom_7_level}}</p>
+                                </div>
+
+                                <div class="col-lg-6">
+                                  <p>Features: {{$property->bathroom_7_features}}</p>
+                                </div>
+
+
+                                 <!-- bathroom 8 -->
+                                 <div class="col-lg-12">
+                                 <p style="font-weight:600">Bathroom 8</p>
+                                </div> 
+                                <div class="col-lg-4">
+                                  <p>Area: {{$property->bathroom_8_area}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Length: {{$property->bathroom_8_length}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>width: {{$property->bathroom_8_width}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Level: {{$property->bathroom_8_level}}</p>
+                                </div>
+
+                                <div class="col-lg-6">
+                                  <p>Features: {{$property->bathroom_8_features}}</p>
+                                </div>
+
+
+                                 <!-- bathroom 9 -->
+                                 <div class="col-lg-12">
+                                 <p style="font-weight:600">Bathroom 9</p>
+                                </div> 
+                                <div class="col-lg-4">
+                                  <p>Area: {{$property->bathroom_9_area}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Length: {{$property->bathroom_9_length}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>width: {{$property->bathroom_9_width}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Level: {{$property->bathroom_9_level}}</p>
+                                </div>
+
+                                <div class="col-lg-6">
+                                  <p>Features: {{$property->bathroom_9_features}}</p>
+                                </div>
+
+
+                      
+                                @endif
+                                
+                                @if($property->bathroom == 10)
+                                <div class="col-lg-12">
+                                  <p style="font-weight:600">Master Bathroom</p>
+                                </div> 
+                                <div class="col-lg-4">
+                                  <p>Area: {{$property->bathroom_1_area}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Length: {{$property->bathroom_1_length}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>width: {{$property->bathroom_1_width}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Level: {{$property->bathroom_1_level}}</p>
+                                </div>
+
+                                <div class="col-lg-6">
+                                  <p>Features: {{$property->bathroom_1_features}}</p>
+                                </div>
+
+                                <!-- bathroom 2 -->
+                                <div class="col-lg-12">
+                                <p style="font-weight:600">Bathroom 2</p>
+                                </div> 
+                                <div class="col-lg-4">
+                                  <p>Area: {{$property->bathroom_2_area}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Length: {{$property->bathroom_2_length}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>width: {{$property->bathroom_2_width}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Level: {{$property->bathroom_2_level}}</p>
+                                </div>
+
+                                <div class="col-lg-6">
+                                  <p>Features: {{$property->bathroom_2_features}}</p>
+                                </div>
+
+
+                                 <!-- bathroom 3 -->
+                                 <div class="col-lg-12">
+                                 <p style="font-weight:600">Bathroom 3</p>
+                                </div> 
+                                <div class="col-lg-4">
+                                  <p>Area: {{$property->bathroom_3_area}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Length: {{$property->bathroom_3_length}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>width: {{$property->bathroom_3_width}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Level: {{$property->bathroom_3_level}}</p>
+                                </div>
+
+                                <div class="col-lg-6">
+                                  <p>Features: {{$property->bathroom_3_features}}</p>
+                                </div>
+
+
+                                 <!-- bathroom 4 -->
+                                 <div class="col-lg-12">
+                                 <p style="font-weight:600">Bathroom 4</p>
+                                </div> 
+                                <div class="col-lg-4">
+                                  <p>Area: {{$property->bathroom_4_area}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Length: {{$property->bathroom_4_length}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>width: {{$property->bathroom_4_width}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Level: {{$property->bathroom_4_level}}</p>
+                                </div>
+
+                                <div class="col-lg-6">
+                                  <p>Features: {{$property->bathroom_4_features}}</p>
+                                </div>
+
+
+                                 <!-- bathroom 5 -->
+                                 <div class="col-lg-12">
+                                 <p style="font-weight:600">Bathroom 5</p>
+                                </div> 
+                                <div class="col-lg-4">
+                                  <p>Area: {{$property->bathroom_5_area}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Length: {{$property->bathroom_5_length}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>width: {{$property->bathroom_5_width}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Level: {{$property->bathroom_5_level}}</p>
+                                </div>
+
+                                <div class="col-lg-6">
+                                  <p>Features: {{$property->bathroom_5_features}}</p>
+                                </div>
+
+
+                                 <!-- bathroom 6 -->
+                                 <div class="col-lg-12">
+                                 <p style="font-weight:600">Bathroom 6</p>
+                                </div> 
+                                <div class="col-lg-4">
+                                  <p>Area: {{$property->bathroom_6_area}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Length: {{$property->bathroom_6_length}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>width: {{$property->bathroom_6_width}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Level: {{$property->bathroom_6_level}}</p>
+                                </div>
+
+                                <div class="col-lg-6">
+                                  <p>Features: {{$property->bathroom_6_features}}</p>
+                                </div>
+
+
+                                 <!-- bathroom 7 -->
+                                 <div class="col-lg-12">
+                                 <p style="font-weight:600">Bathroom 7</p>
+                                </div> 
+                                <div class="col-lg-4">
+                                  <p>Area: {{$property->bathroom_7_area}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Length: {{$property->bathroom_7_length}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>width: {{$property->bathroom_7_width}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Level: {{$property->bathroom_7_level}}</p>
+                                </div>
+
+                                <div class="col-lg-6">
+                                  <p>Features: {{$property->bathroom_7_features}}</p>
+                                </div>
+
+
+                                 <!-- bathroom 8 -->
+                                 <div class="col-lg-12">
+                                 <p style="font-weight:600">Bathroom 8</p>
+                                </div> 
+                                <div class="col-lg-4">
+                                  <p>Area: {{$property->bathroom_8_area}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Length: {{$property->bathroom_8_length}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>width: {{$property->bathroom_8_width}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Level: {{$property->bathroom_8_level}}</p>
+                                </div>
+
+                                <div class="col-lg-6">
+                                  <p>Features: {{$property->bathroom_8_features}}</p>
+                                </div>
+
+
+                                 <!-- bathroom 9 -->
+                                 <div class="col-lg-12">
+                                 <p style="font-weight:600">Bathroom 9</p>
+                                </div> 
+                                <div class="col-lg-4">
+                                  <p>Area: {{$property->bathroom_9_area}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Length: {{$property->bathroom_9_length}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>width: {{$property->bathroom_9_width}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Level: {{$property->bathroom_9_level}}</p>
+                                </div>
+
+                                <div class="col-lg-6">
+                                  <p>Features: {{$property->bathroom_9_features}}</p>
+                                </div>
+
+
+                                 <!-- bathroom 10 -->
+                                 <div class="col-lg-12">
+                                 <p style="font-weight:600">Bathroom 10</p>
+                                </div> 
+                                <div class="col-lg-4">
+                                  <p>Area: {{$property->bathroom_10_area}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Length: {{$property->bathroom_10_length}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>width: {{$property->bathroom_10_width}}</p>
+                                </div>
+
+                                <div class="col-lg-4">
+                                  <p>Level: {{$property->bathroom_10_level}}</p>
+                                </div>
+
+                                <div class="col-lg-6">
+                                  <p>Features: {{$property->bathroom_10_features}}</p>
+                                </div>
+
+                                <div class="col-lg-6">
+                                  <p>Features: {{$property->bathroom_10_features}}</p>
+                                </div>
+
+                                @endif
+
+
+
+                                <!-- Garage -->
                                 <h5 class="border-b pb-2">Garage</h5>
                                 <div class="col-lg-4">
                                   <p>Has a Garage: {{$property->has_garage}}</p>
@@ -1717,8 +3202,8 @@ img.lightbox-image {
                                                 trigger="hover"
                                                 colors="primary:#fe0000,secondary:#fe0000"
                                                 style="width:30px;height:30px; padding-top: 7px;">
-                                            </lord-icon>Bedrooms :
-                                                <span class="fw-normal float-end">{{$property->bedrooms}}</span>
+                                            </lord-icon>Bedroom :
+                                                <span class="fw-normal float-end">{{$property->bedroom}}</span>
                                             </li>
                                             <li class="d-block fw-bold lh-lg">
                                             <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>

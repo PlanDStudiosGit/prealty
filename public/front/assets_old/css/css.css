@@ -1,0 +1,456 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  height: 100%;
+}
+
+/* Remove the navbar's default margin-bottom and rounded borders */
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
+.navbar-header img {
+  margin-left: 34px;
+  margin-top: 10px;
+}
+
+.navbar-1 {
+  display: none;
+}
+.button-signup{
+  background-color: rgb(38, 117, 228);
+  font-size: 14px;
+  color: #ffffff;
+  padding: 5px 20px;
+}
+.divider:after,
+.divider:before {
+content: "";
+flex: 1;
+height: 1px;
+background: #eee;
+}
+
+.button-login{
+  background-color: rgb(255, 255, 255);
+  font-size: 14px;
+  color: #202120;
+  padding: 5px 20px;
+}
+
+footer {
+  background-color: #f2f2f2;
+  padding: 25px;
+}
+
+.carousel-inner img {
+  width: 100%;
+  margin: auto;
+  min-height: 200px;
+}
+
+.text-small {
+  font-size: 0.9rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+.mb-3 {
+  color: #ffffff;
+}
+
+.logo-01 {
+  text-align: center;
+  padding-top: 2rem;
+  width: 200px;
+}
+
+footer {
+  background: #212529;
+}
+
+
+.button-1 {
+  background-color: rgb(38, 117, 228);
+  font-size: 16px;
+  color: #ffffff;
+  padding: 10px 60px;
+}
+
+.button-1:hover,
+.button-1:active,
+.button-1:focus {
+  background-color: rgb(38, 117, 228);
+  color: #ffffff;
+}
+
+.button-test-1 {
+  background-color: rgb(38, 117, 228);
+  font-size: 16px;
+  color: #ffffff;
+  padding: 10px 60px;
+  margin-top: 20px;
+  float: right;
+}
+
+.share {
+  float: right;
+  margin: 20px -20px 0 0;
+}
+
+
+.share-btn {
+  border-radius: 100%;
+  height: 40px;
+  width: 40px;
+  background-color: rgb(230, 230, 230);
+  color: #212021;
+  border: none;
+  margin-left: 10px;
+}
+
+.share-btn:hover {
+  background-color: #2f6bda;
+  color: #ffffff;
+}
+
+.save-btn {
+  border-radius: 100%;
+  height: 40px;
+  width: 40px;
+  background-color: rgb(230, 230, 230);
+  color: #202120;
+  border: none;
+}
+
+.save-btn:hover {
+  background-color: #da2f57;
+  color: #ffffff;
+}
+
+.border-ph {
+  border: 1px solid #d3d3d3;
+  padding: 0px 0px 0px 20px;
+  border-radius: 5px;
+}
+
+.avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-left: -20px !important;
+}
+
+.card-body-style {
+  border-radius: 0px 0px 10px 10px;
+  padding: 15px 26px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card-style {
+  border-radius: 10px 10px 0px 0px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card-text-style {
+  color: rgb(39, 149, 39);
+}
+
+.property-card .property-img{
+  width: 100%;
+  height: 250px;
+
+}
+
+.button-01 {
+  background-color: rgb(38, 117, 228);
+  font-size: 14px;
+  color: #ffffff;
+  padding: 10px 40px;
+  margin-bottom: 15px;
+}
+
+.button-view {
+  background-color: rgb(38, 117, 228);
+  font-size: 14px;
+  color: #ffffff;
+  padding: 10px 40px;
+  margin: 15px 0;
+}
+
+.paragraph {
+  font-weight: 400;
+}
+
+#formContent {
+  -webkit-border-radius: 10px 10px 10px 10px;
+  border-radius: 10px 10px 10px 10px;
+  background: #fff;
+  padding: 30px;
+  width: 90%;
+  max-width: 450px;
+  position: relative;
+  padding: 0px;
+  -webkit-box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+#formFooter {
+  background-color: #f6f6f6;
+  padding: 20px;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.icons {
+  margin: 30px 0px;
+}
+
+.fa-ul {
+  display: flex;
+}
+
+.fa-li {
+  margin-right: 10px;
+}
+
+.carousel-image {
+  height: 40rem;
+  width: 100%;
+}
+
+.green {
+  color: rgb(39, 149, 39);
+}
+
+.grey {
+  color: rgb(137, 137, 137);
+}
+
+#icon-fa {
+  font-size: 16px !important;
+  color: #afafaf;
+}
+
+.p-font {
+  font-size: 16px !important;
+  color: #555555;
+}
+
+.tp {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.tp-1 {
+  border-radius: 10px;
+}
+.mb-1{
+  margin-bottom: 10px;
+}
+.pt-1{
+  font-size: 14px;
+}
+.card-style-1 {
+  text-align: center;
+  border: 1px solid #d3d3d3;
+  padding: 01px 0px 20px 0px;
+  margin: 20px 0;
+  border-radius: 5px;
+}
+
+.investor {
+  float: right;
+  padding-top: 05px;
+}
+
+/*-----------Wizard start-----------*/
+.tab-text {
+  text-align: left !important;
+  padding: 0 20px;
+}
+
+.test-1 {
+  margin: 10% auto;
+}
+
+.login-form-text {
+  padding: 20px 0;
+  margin: 17% auto;
+}
+
+.all {
+  font-size: 14px;
+  margin-top: 4px;
+}
+.view-more{
+  position: absolute;
+  top: 0%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  text-align: center;
+  padding-top: calc(50% - 37px);
+  color: #ffff;
+  opacity: 0;
+}
+.view-more:hover {
+  position: absolute;
+  top: 0%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  text-align: center;
+  padding-top: calc(50% - 37px);
+  color: #ffff;
+  opacity: 1;
+  -webkit-transition:  0.1s ease-out;
+  -moz-transition: 0.1s ease-out;
+  -o-transition: 0.1s ease-out;
+  transition: 0.1s ease-out;
+}
+.viewmore{
+  position: absolute;
+  top: 0%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  text-align: center;
+  padding-top: calc(50% - 37px);
+  color: #ffff;
+  opacity: 0;
+}
+
+.viewmore:hover {
+  position: absolute;
+  top: 0%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  text-align: center;
+  padding-top: calc(50% - 37px);
+  color: #007bff;
+  opacity: 1;
+  -webkit-transition:  1s ease-out;
+  -moz-transition: 1s ease-out;
+  -o-transition: 1s ease-out;
+  transition: 1s ease-out;
+}
+.pr-1{
+  margin-right: -15px !important;
+}
+.pr-2{
+  margin-left: -15px !important;
+}
+
+/*----------wizard ends---------*/
+
+
+
+
+@media (max-width: 767px) {
+  .sign-content h3 {
+    font-size: 40px;
+  }
+
+  .wizard .nav-tabs>li a i {
+    display: none;
+  }
+
+  .signup-logo-header .navbar-toggle {
+    margin: 0;
+    margin-top: 8px;
+  }
+
+  .signup-logo-header .logo_area {
+    margin-top: 0;
+  }
+
+  .signup-logo-header .header-flex {
+    display: block;
+  }
+}
+
+.next-button {
+  background-color: rgb(38, 117, 228) !important;
+  font-size: 16px;
+  color: #ffffff;
+  border-radius: 10px !important;
+  padding: 10px 30px !important;
+}
+
+.next-button:hover,
+.next-button:active,
+.next-button:focus {
+  background-color: rgb(38, 117, 228);
+  color: #ffffff;
+}
+
+.back-button {
+  background-color: rgb(172, 172, 172) !important;
+  font-size: 16px;
+  color: #ffffff;
+  border-radius: 10px !important;
+  padding: 10px 30px !important;
+}
+
+.signin-button {
+  margin-bottom: 20px;
+  background-color: rgb(38, 117, 228);
+  font-size: 16px;
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 10px 30px;
+}
+
+
+.signin-button:hover,
+.signin-button:active,
+.signin-button:focus {
+  background-color: rgb(38, 117, 228);
+  color: #ffffff;
+}
+
+#test {
+  height: 110px;
+  background-color: #333;
+  position: fixed;
+  top: -150px;
+  width: 100%;
+  transition: top 0.9s;
+}
+
+/* Style the navbar links */
+#test a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+}
+
+
+
+/* Hide the carousel text when the screen is less than 600 pixels wide */
+@media (max-width: 600px) {
+  .carousel-caption {
+    display: none;
+  }
+}
